@@ -2,9 +2,14 @@
   "name": "Pixel DS",
   "id": "1033789132432632609",
   "api": "1.0.0",
-  "main": "code.js",
   "editorType": [
     "figma"
   ],
-  "ui": "ui.html"
+  "main": "dist/code.js",
+  "ui": "dist/ui.html",
+  "menu": [
+    {"name": "Show UI", "command": "show_UI"},
+    {"name": "Truncate Text In Selection", "command": "truncate_text"},
+    {"name": "Vertical Data Value Layout", "command": "vertical_data_value_layout"}
+  ]
 }
