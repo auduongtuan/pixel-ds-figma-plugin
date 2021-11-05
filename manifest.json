@@ -1,0 +1,10 @@
+{
+  "name": "Pixel DS",
+  "id": "1033789132432632609",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": [
+    "figma"
+  ],
+  "ui": "ui.html"
+}
