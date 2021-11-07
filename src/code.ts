@@ -34,11 +34,14 @@ figma.on("run", async () => {
     figma.closePlugin()
   }
   if (figma.command == "vertical_data_value_layout") {
+    // figma.showUI(__html__, {title: "Pixel DS Plugin", width: 400, height: 600})
+    // figma.ui.postMessage({command: "vertical_data_value"}); 
+
     verticalDataValueLayout();
     figma.closePlugin()
   }
   if (figma.command == "show_UI") {
-    figma.showUI(__html__) 
+    figma.showUI(__html__, {title: "Pixel DS Plugin", width: 400, height: 600}) 
   }
 
 })

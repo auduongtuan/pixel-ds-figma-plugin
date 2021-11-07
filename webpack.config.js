@@ -1,5 +1,6 @@
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const WebpackShellPluginNext = require('webpack-shell-plugin-next')
 const path = require('path')
 
 module.exports = (env, argv) => ({
@@ -11,6 +12,14 @@ module.exports = (env, argv) => ({
   entry: {
     ui: './src/ui.tsx', // The entry point for your UI code
     code: './src/code.ts', // The entry point for your plugin code
+  },
+
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    compress: true,
+    port: 9000,
   },
 
   module: {
@@ -46,5 +55,22 @@ module.exports = (env, argv) => ({
       cache: false
     }),
     new HtmlWebpackInlineSourcePlugin(HtmlWebpackPlugin, [/ui/]),
+    new WebpackShellPluginNext({
+      onBuildStart:{
+        scripts: ['echo "Webpack Start"'],
+        blocking: true,
+        parallel: false
+      }, 
+      onBuildEnd:{
+        scripts: ['echo "Webpack End"'],
+        blocking: false,
+        parallel: true
+      },
+      onDoneWatch:{
+        scripts: ['sh run-plugin.sh'],
+        blocking: true,
+        parallel: false
+      }
+    })
   ],
 })

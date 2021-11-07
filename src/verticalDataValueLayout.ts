@@ -1,24 +1,32 @@
-const gridWidth = 360;
-const col = 2;
-const gap = 16;
-const spacing = 2;
-const colWidth = (gridWidth+gap)/col-gap;
+import { Component } from "react"
+import {shallowEqual, switchVariant} from "./helpers"
+const gridWidth = 720
+const col = 1
+const gap = 16
+const spacing = 2
+const colWidth = (gridWidth+gap)/col-gap
 function isDataValue(item: SceneNode): item is InstanceNode {
 	if(item.type == "INSTANCE" && item.mainComponent && item.mainComponent.parent && item.mainComponent.parent.name == "Vertical Data Value")
 	{
-		return true;
+		return true
 	}
-	return false;
+	return false
 }
 
 function dataValueLayout(items: SceneNode[], container: FrameNode | null = null) {
 	items = items.sort((a, b) => {
+		// sort default by y, and when x
 		if (a.x == b.x) return a.y - b.y;
 		return a.x - b.x;
 	});
 	items.forEach((item) => {
 		if(isDataValue(item)) {
 			item.resizeWithoutConstraints(colWidth, item.height);
+			if (colWidth * 1/3 <= 128) {
+				switchVariant(item, {"Min-width Label": "True"})
+			} else {
+				switchVariant(item, {"Min-width Label": "False"})
+			}
 		}
 	});
 	const totalHeight = items.reduce((sum, item) => sum + (isDataValue(item) ? item.height : 0), 0) + spacing*items.length - col*spacing;
@@ -32,7 +40,7 @@ function dataValueLayout(items: SceneNode[], container: FrameNode | null = null)
 		frame.x = frameX;
         frame.y = frameY;
         frame.resizeWithoutConstraints(gridWidth, frame.height);
-        frame.name = "Data Value";
+        frame.name = "Vertical Data Value";
 		parent = (items[0] && items[0].parent) && items[0].parent;
 		if(parent) parent.appendChild(frame);
 	} else {
