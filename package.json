@@ -24,12 +24,15 @@
   "devDependencies": {
     "@figma/plugin-typings": "^1.38.0",
     "@parcel/transformer-typescript-tsc": "^2.0.0",
+    "@types/lodash": "^4.14.176",
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
     "css-loader": "^6.5.1",
     "html-webpack-inline-source-plugin": "^1.0.0-beta.2",
     "html-webpack-plugin": "^5.5.0",
     "parcel": "^2.0.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.2.6",
     "typescript": "^4.4.4",
@@ -41,6 +44,7 @@
   },
   "dependencies": {
     "figma-plugin-ds": "^1.0.1",
+    "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-figma-plugin-ds": "^2.3.0"

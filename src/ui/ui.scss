@@ -1,0 +1,131 @@
+$increments: (
+  0,  
+  2,
+  4,
+  8,
+  12,
+  16,
+  20,
+  24,
+  28,
+  32,
+  36,
+  40,
+  48
+); // Adjust this to include the pixel amounts you need.
+$directions: (top, bottom, left, right); // Leave this variable alone
+$lg: "screen and (max-width: 1162px)";
+$md: "screen and (max-width: 768px)";
+$sm: "screen and (max-width: 576px)";
+@each $increment in $increments {
+  .m-#{$increment} {
+    margin: #{$increment}px !important;
+  }
+  .p-#{$increment} {
+    margin: #{$increment}px !important;
+  }
+  @each $direction in $directions {
+    .m#{str-slice($direction, 0, 1)}-#{$increment} {
+      margin-#{$direction}: #{$increment}px !important;
+    }
+
+    .p#{str-slice($direction, 0, 1)}-#{$increment} {
+      padding-#{$direction}: #{$increment}px !important;
+    }
+  }
+}
+
+$breakpoints: (lg, md, sm);
+$breakpoint_values: (
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+);
+@each $breakpoint in $breakpoints {
+  @media #{map-get($breakpoint_values, $breakpoint)} {
+    @each $increment in $increments {
+      .#{$breakpoint}\:m-#{$increment} {
+        margin: #{$increment}px !important;
+      }
+      .#{$breakpoint}\:p-#{$increment} {
+        padding: #{$increment}px !important;
+      }
+      .#{$breakpoint}\:w-#{$increment} {
+        width: #{$increment}px !important;
+      }
+      .#{$breakpoint}\:h-#{$increment} {
+        height: #{$increment}px !important;
+      }
+      @each $direction in $directions {
+        .#{$breakpoint}\:m#{str-slice($direction, 0, 1)}-#{$increment} {
+          margin-#{$direction}: #{$increment}px !important;
+        }
+
+        .#{$breakpoint}\:p#{str-slice($direction, 0, 1)}-#{$increment} {
+          padding-#{$direction}: #{$increment}px !important;
+        }
+      }
+    }
+  }
+}
+
+.first\:pt-0 {
+  &:first-child {
+    padding-top: 0 !important;
+  }
+}
+
+.last\:pb-0 {
+  &:last-child {
+    padding-bottom: 0 !important;
+  }
+}
+
+.first\:mt-0 {
+  &:first-child {
+    margin-top: 0 !important;
+  }
+}
+
+.last\:mb-0 {
+  &:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+.last\:mr-0 {
+  &:last-child {
+    margin-right: 0 !important;
+  }
+}
+
+.grid {
+    --gap: 16px;
+    --col: 2;
+    display: grid;
+    grid-template-columns: repeat(var(--col), 1fr);
+    gap: var(--gap);   
+}
+
+body {
+  font-size: 12px;
+}
+
+.checkbox {
+  margin-top: -12px;
+}
+
+.checkbox__box {
+  width: 0;
+  height: 0;
+}
+
+// *custom
+
+.input__field.show-border {
+  border-color: var(--black1);
+}
+
+label {
+    display: block;
+}

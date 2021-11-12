@@ -2,52 +2,42 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { useState, useEffect } from 'react'
 // import './ui.css'
-import { Disclosure, Tip, Title, Checkbox, Button } from "react-figma-plugin-ds";
+// import { Disclosure, Tip, Title, Checkbox, Button } from "react-figma-plugin-ds";
+import GridHelper from './ui/GridHelper';
 import "react-figma-plugin-ds/figma-plugin-ds.css";
-// declare function require(path: string): any
+import "./ui/ui.scss";
+import VerticalDataValue from './ui/VerticalDataValue';
 
 const App = () => {
-  const [textbox, setTextbox] = useState<HTMLInputElement>();
-  const [command, setCommand] = useState();
+  const [data, setData] = useState<{[key: string]: any}>({type: undefined});
 
   useEffect(() => {
     window.onmessage = async (event) => {
-      setCommand(event.data.pluginMessage.command);
+      setData(data => {
+        return {...data, ...event.data.pluginMessage}
+      });
     }
     // return () => {
     //   cleanup
     // }
-  }, [])
-
-  const countRef = (element: HTMLInputElement) => {
-    if (element) element.value = '5'
-    setTextbox(element)
-  }
-
-  const onCreate = () => {
-    const count = parseInt(textbox.value, 10)
-    parent.postMessage({ pluginMessage: { type: 'create-rectangles', count } }, '*')
-  }
-
-  const onCancel = () => {
-    parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
-  }
-
+  }, []);
   
-  return <div>
-    {/* <img src={require('./logo.svg')} /> */}
-    {(command) ? <>
-    <h2>Rectangle Creator</h2>
-    {command}
-    Count: <div className="input">
-      <input type="input" className="input__field" ref={countRef} />
-    </div>
-    <Button id="create" onClick={onCreate}>Create</Button>
-    <Button isSecondary onClick={onCancel}>Cancel</Button>
-    <Button isTertiary onClick={onCancel}>Cancel</Button>
-    </> : "Loading test hay qua ne..."}
-    {/* <button className='button button--tertiary' onClick={this.onCancel}>Test</button> */}
-  </div>;
+  const ui = () => {
+    switch(data.type) {
+      case "grid_helper":
+        return <GridHelper data={data} />;
+      case "vertical_data_value":
+        return <VerticalDataValue data={data} />;
+      default:
+        return <p>Loading...</p>
+    }
+  }
+  return (
+    <>
+    {ui()}
+    </>
+  );
+
 }
 
 ReactDOM.render(<App />, document.getElementById('react-page'))

@@ -1,23 +1,11 @@
-import truncateText from "./truncateText"
-import verticalDataValueLayout from "./verticalDataValueLayout"
-figma.ui.onmessage = msg => {
-  if (msg.type === 'create-rectangles') {
-    const nodes = []
+import * as _ from "lodash"
+import {fileNameTruncate, truncateInit} from "./command/truncateText"
+import * as h from "./command/commandHelper"
+import * as verticalDataValue from "./command/verticalDataValue_v2"
+import * as gridHelper from "./command/gridHelper"
+import * as tabBar from "./command/tabBar"
+import * as avatar from "./command/avatar"
 
-    for (let i = 0; i < msg.count; i++) {
-      const rect = figma.createRectangle()
-      rect.x = i * 150
-      rect.fills = [{type: 'SOLID', color: {r: 1, g: 0.5, b: 0}}]
-      figma.currentPage.appendChild(rect)
-      nodes.push(rect)
-    }
-
-    figma.currentPage.selection = nodes
-    figma.viewport.scrollAndZoomIntoView(nodes)
-  }
-
-  figma.closePlugin()
-}
 
 const dsFonts = [
   {family: "Inter", style: "Regular"},
@@ -26,22 +14,51 @@ const dsFonts = [
   {family: "Inter", style: "Bold"},
 ]
 
+const uiCommands = {
+  "grid_helper": gridHelper,
+  "vertical_data_value": verticalDataValue,
+}
+
+const nonuiCommands = {
+  "tabbar_init": tabBar.truncate,
+  "name_avatar_init": avatar.nameInit,
+  "filename_truncate": fileNameTruncate,
+  "truncate_init": truncateInit
+}
+
+figma.ui.onmessage = msg => {
+  _.forOwn(uiCommands, (value, key) => {
+    if (figma.command == key) {
+      if(value.onMessage) value.onMessage(msg);
+    }
+  });
+}
+
+figma.on("selectionchange", () => {
+  // debug selection
+  console.log(h.selection(0).getSharedPluginData("aperia", "rawCharacters"));
+  console.log(figma.currentPage.selection);
+  _.forOwn(uiCommands, (value, key) => {
+    if (figma.command == key) {
+      if(value.onSelectionChange) value.onSelectionChange();
+    }
+  });
+});
+
 
 figma.on("run", async () => {
   await Promise.all(dsFonts.map((fontName: FontName) => figma.loadFontAsync(fontName)))
-  if (figma.command == "truncate_text") {
-    truncateText(figma.currentPage.selection)
-    figma.closePlugin()
-  }
-  if (figma.command == "vertical_data_value_layout") {
-    // figma.showUI(__html__, {title: "Pixel DS Plugin", width: 400, height: 600})
-    // figma.ui.postMessage({command: "vertical_data_value"}); 
 
-    verticalDataValueLayout();
-    figma.closePlugin()
-  }
-  if (figma.command == "show_UI") {
-    figma.showUI(__html__, {title: "Pixel DS Plugin", width: 400, height: 600}) 
-  }
+  _.forOwn(uiCommands, (value, key) => {
+    if (figma.command == key) {
+      if(value.run) value.run();
+    }
+  });
+  _.forOwn(nonuiCommands, (value, key) => {
+    if (figma.command == key) {
+      value();
+      figma.closePlugin();
+    }
+  });
 
-})
+});

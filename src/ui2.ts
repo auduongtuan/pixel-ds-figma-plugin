@@ -1,1 +1,0 @@
-document.querySelector("#react-page").innerHTML = "Test ne he";
