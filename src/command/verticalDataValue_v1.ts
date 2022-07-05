@@ -1,5 +1,5 @@
 import { Component } from "react"
-import {postData, switchVariant} from "./commandHelper"
+import {postData, swapVariant} from "./commandHelper"
 
 function isDataValue(item: SceneNode): item is InstanceNode {
 	if(item.type == "INSTANCE" && item.mainComponent && item.mainComponent.parent && item.mainComponent.parent.name == "Vertical Data Value")
@@ -23,9 +23,9 @@ function dataValueLayout(items: SceneNode[], container: FrameNode | null = null,
 		if(isDataValue(item)) {
 			item.resizeWithoutConstraints(colWidth, item.height);
 			if (colWidth * 1/3 <= 128) {
-				switchVariant(item, {"Min-width Label": "True"})
+				swapVariant(item, {"Min-width Label": "True"})
 			} else {
-				switchVariant(item, {"Min-width Label": "False"})
+				swapVariant(item, {"Min-width Label": "False"})
 			}
 		}
 	});
@@ -83,7 +83,7 @@ export const onSelectionChange = () => {
 
 }
 
-export const onMessage = (msg) => {
+export const onMessage = (msg: {[key: string]: any}) => {
 	// layout function
 	if (msg.type == "layout") {
 		console.log(msg.configs);
@@ -98,6 +98,6 @@ export const onMessage = (msg) => {
 }
 
 export const run = () => {
-	figma.showUI(__html__, {title: "Pixel DS - Vertical Data Value", width: 320, height: 240}) 
+	figma.showUI(__html__, {title: "Aperia DS - Vertical Data Value", width: 320, height: 240}) 
     postData({type: "vertical_data_value"});
 }

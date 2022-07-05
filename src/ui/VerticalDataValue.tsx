@@ -18,7 +18,7 @@ const VerticalDataValue = ({data}) => {
             </Grid>
             
             <div className="mt-24"><Button onClick={() => 
-                ui.postData({"type": "layout", "configs": ui.getConfigs(["containerWidth", "cols", "gap", "spacing"])})
+                ui.postData({"type": "layout", "configs": ui.getInputs(["containerWidth", "cols", "gap", "spacing"])})
             }>Layout</Button></div>
 
         </div>

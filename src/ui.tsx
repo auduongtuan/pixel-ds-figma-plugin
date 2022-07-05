@@ -1,12 +1,15 @@
 import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+import {render} from 'react-dom'
 import { useState, useEffect } from 'react'
-// import './ui.css'
-// import { Disclosure, Tip, Title, Checkbox, Button } from "react-figma-plugin-ds";
-import GridHelper from './ui/GridHelper';
+
 import "react-figma-plugin-ds/figma-plugin-ds.css";
 import "./ui/ui.scss";
+import GridHelper from './ui/GridHelper';
 import VerticalDataValue from './ui/VerticalDataValue';
+import PluginData from './ui/PluginData';
+import MultiSelect from './ui/MultiSelect';
+import CodeHighlighter from './ui/CodeHighlighter';
+
 
 const App = () => {
   const [data, setData] = useState<{[key: string]: any}>({type: undefined});
@@ -17,9 +20,6 @@ const App = () => {
         return {...data, ...event.data.pluginMessage}
       });
     }
-    // return () => {
-    //   cleanup
-    // }
   }, []);
   
   const ui = () => {
@@ -28,6 +28,12 @@ const App = () => {
         return <GridHelper data={data} />;
       case "vertical_data_value":
         return <VerticalDataValue data={data} />;
+      case "multiselect":
+        return <MultiSelect data={data} />;
+      case "plugin_data":
+        return <PluginData data={data} />;
+      case "codehighlighter":
+        return <CodeHighlighter data={data} />;
       default:
         return <p>Loading...</p>
     }
@@ -40,4 +46,4 @@ const App = () => {
 
 }
 
-ReactDOM.render(<App />, document.getElementById('react-page'))
+render(<App />, document.getElementById('react-page'))

@@ -1,5 +1,5 @@
 {
-  "name": "Pixel DS",
+  "name": "Aperia DS",
   "id": "1033789132432632609",
   "api": "1.0.0",
   "editorType": [
@@ -8,12 +8,58 @@
   "main": "dist/code.js",
   "ui": "dist/ui.html",
   "menu": [
-    {"name": "Truncate File Name", "command": "filename_truncate"},
-    {"name": "Vertical Data Value Layout", "command": "vertical_data_value_layout"},
-    {"name": "Vertical Data Value", "command": "vertical_data_value"},
-    {"name": "Grid Helper", "command": "grid_helper"},
-    {"name": "Tab Bar Init", "command": "tabbar_init"},
-    {"name": "Name Avatar Init", "command": "name_avatar_init"},
-    {"name": "Truncate Init", "command": "truncate_init"}
+    {"name": "Open Plugin Central", "command": "plugin_data"},
+    {"separator": true},
+    {
+      "name": "Avatar",
+      "menu": [
+        {"name": "Generate Name Avatar", "command": "name_avatar_init"},
+        {"name": "Generate Photo Avatar", "command": "name_avatar_init"}
+      ]
+    },
+    {
+      "name": "Grid",
+      "menu": [
+        {"name": "Show Grid UI", "command": "grid_helper"},
+        {"separator": true},
+        {"name": "Create grid", "command": "create_grid"},
+        {"name": "Update grid", "command": "update_grid"},
+        {"separator": true},
+        {"name": "Sort grid by column (asc)", "command": "grid_sort_by_column_asc"},
+        {"name": "Sort grid by column (desc)", "command": "grid_sort_by_column_desc"},
+        {"name": "Toggle grid horizontal scrollbar", "command": "grid_toggle_horizontal_scroll"},
+        {"name": "Toggle grid vertical scrollbar", "command": "grid_toggle_vertical_scroll"}
+      ]
+    },
+    {
+      "name": "Form controls",
+      "menu": [
+        {"name": "Reposition pointer of Textarea", "command": "textbox_init"},
+        {"name": "Edit Multi Select values", "command": "multiselect"},
+        {"name": "Toggle Sensitive Mask", "command": "toggle_sensitive_mask"}
+      ]
+    },
+    {
+      "name": "Truncate",
+      "menu": [
+        {"name": "Truncate selection", "command": "truncate_init"},
+        {"separator": true},
+        {"name": "Set to truncate at start", "command": "truncate_start_setup"},
+        {"name": "Set to truncate at end", "command": "truncate_end_setup"},
+        {"name": "Set to truncate at middle", "command": "truncate_middle_setup"},
+        {"separator": true},
+        {"name": "Set up advanced truncation", "command": "truncate_end_setup"}
+      ]
+    },
+    {"separator": true},
+    {"name": "Generate Vertical Data Value", "command": "vertical_data_value"},
+    {"name": "Generate Tab Bar", "command": "tabbar_init"},
+    {"name": "Init Code Highlighter", "command": "codehighlighter_init"},
+    {"name": "Code Highlighter", "command": "codehighlighter"},
+    {"name": "Manage Plugin Data", "command": "plugin_data"}
+  ],
+  "relaunchButtons": [
+    {"name": "Update grid", "command": "update_grid"},
+    {"name": "Update truncation", "command": "truncate_init", "multipleSelection": true}
   ]
 }

@@ -1,5 +1,5 @@
 import { Component } from "react"
-import {postData, switchVariant} from "./commandHelper"
+import {postData, swapVariant, selection} from "./commandHelper"
 
 const ruleComponent = <ComponentNode>figma.getNodeById("256:4701");
 
@@ -11,6 +11,12 @@ function isDataValue(item: SceneNode): item is InstanceNode {
 	return false
 }
 
+function isDataValueContainer(node: BaseNode): node is FrameNode {
+	return node.type == "FRAME" && (node.name == "Vertical Data Value" || node.getSharedPluginData("aperia", "vertical_data_value") == "1")
+}
+function isDataValueColumn(node: BaseNode): node is FrameNode {
+	return node.type == "FRAME" && (node.name.split(" ")[0] == "Column")
+}
 function dataValueLayout(items: SceneNode[], container: FrameNode | null = null, configs = {containerWidth: 720, cols: 2, gap: 16, spacing: 2}) {
 
 
@@ -23,13 +29,14 @@ function dataValueLayout(items: SceneNode[], container: FrameNode | null = null,
 		return a.x - b.x;
 	});
 
-	items.forEach((item) => {
+	items.forEach((item, i) => {
 		if(isDataValue(item)) {
 			item.resizeWithoutConstraints(colWidth, item.height);
+			// item.layoutAlign = "STRETCH";
 			if (colWidth * 1/3 <= 128) {
-				switchVariant(item, {"Min-width Label": "True"})
+				swapVariant(item, {"Min-width Label": "True"})
 			} else {
-				switchVariant(item, {"Min-width Label": "False"})
+				swapVariant(item, {"Min-width Label": "False"})
 			}
             figma.currentPage.appendChild(item);
 		}
@@ -45,13 +52,13 @@ function dataValueLayout(items: SceneNode[], container: FrameNode | null = null,
         frame = figma.createFrame();
 		frame.x = frameX;
         frame.y = frameY;
-        frame.resizeWithoutConstraints(containerWidth, frame.height);
 		if(parent) parent.appendChild(frame);
 	} else {
 		frame = container;
 		parent = container.parent;
 	}
-    // setup frame layotu
+    // setup frame layout
+	frame.resizeWithoutConstraints(containerWidth, frame.height);
     frame.layoutMode = "HORIZONTAL";
     frame.primaryAxisSizingMode = "FIXED";
     frame.counterAxisSizingMode = "AUTO";
@@ -84,72 +91,96 @@ function dataValueLayout(items: SceneNode[], container: FrameNode | null = null,
 		return colFrame;
 	}
 	let colFrames = Array(cols).fill(null).map((col, i) => createColFrame(i, cols));
-	console.log(colFrames);
-	
+	let remainHeight = totalHeight;
 
+	
 	let currentY = 0;
-	let currentX = 0;
+	// let currentX = 0;
 	let currentCol = 0;
 	// let firstColumHeight = 0;
-	let columnHeights:number[] = new Array(cols).fill(0);
+	// let columnHeights:number[] = new Array(cols).fill(0);
 	items.forEach((item) => {
 		if(isDataValue(item)) {
-			item.layoutAlign = "STRETCH";
-			colFrames[currentCol].appendChild(item);
-			columnHeights[currentCol] += item.height + spacing;
-			// van chua lo avg height
-			if (currentY+item.height <= avgHeight) {
+			// van chua vuot qua avg height hoac dang la cot cuoi cung
+			let remainCols = (cols-(currentCol+1));
+			let dontBreak = false;
+			if (remainCols != 0 && remainHeight/remainCols > avgHeight) {
+				console.log(remainHeight/remainCols);
+				dontBreak = true;
+			}
+			// is last col
+			if (currentCol == cols - 1) dontBreak = true;
+	
+			if (currentY+item.height+spacing <= avgHeight || dontBreak) {
 				currentY += item.height + spacing;
 			} 
 			else {
 				currentY = 0;
-				currentX += item.width + gap;
+				// currentX += item.width + gap;
 				currentCol++;
+			}
+			if(colFrames[currentCol]) {
+				colFrames[currentCol].appendChild(item);
+				// columnHeights[currentCol] += item.height + spacing;
+				remainHeight -= item.height + spacing;
 			}
 		}
 	});
-	const longestColumnHeight = columnHeights.reduce(function (p, v) {
-		return ( p > v ? p : v );
-	}) - spacing;
-	frame.resizeWithoutConstraints(containerWidth, longestColumnHeight)
-    frame.setSharedPluginData("aperia", "isVerticalDataValue", "1");
+
+    frame.setSharedPluginData("aperia", "vertical_data_value", "1");
     // figma.viewport.scrollAndZoomIntoView([frame]);
 }
 
 export const onSelectionChange = () => {
 
 }
-
-export const onMessage = (msg) => {
+const unGroupFrame = async (frame: FrameNode) => {
+	frame.layoutMode = "NONE";
+	frame.children.forEach(node => {
+		if (node.type == "INSTANCE" && node.mainComponent.id == ruleComponent.id) node.remove();
+		if (node.type == "FRAME" && node.layoutMode == "VERTICAL") {
+			node.layoutMode = "NONE"
+			let i = 0;
+			node.children.forEach((child: SceneNode) => {
+				frame.appendChild(child);
+				child.x = node.x;
+				// if (i == node.children.length - 1) node.remove();
+				// i++;
+			});
+			node.remove();
+		}
+	});
+}
+export const onMessage = async (msg) => {
 	// layout function
 	if (msg.type == "layout") {
-		console.log(msg.configs);
-		const currentSelection = figma.currentPage.selection.slice();
-		if(currentSelection.length > 1) {
+		const currentSelection = selection();
+		if(currentSelection.length > 1 && isDataValue(currentSelection[0])) {
 			dataValueLayout(currentSelection, null, msg.configs);
 		}
-		if(currentSelection.length == 1 && currentSelection[0].type == "FRAME" && (currentSelection[0].name == "Vertical Data Value" || currentSelection[0].getSharedPluginData("aperia", "isVerticalDataValue") == "1")) {
+	
+		if(currentSelection.length == 1) {
+			let frame: FrameNode | null = null;
+			if (isDataValueContainer(currentSelection[0])) {
+				frame = currentSelection[0]
+			}
+			if (isDataValue(currentSelection[0]) && isDataValueContainer(currentSelection[0].parent.parent)) {
+				frame = currentSelection[0].parent.parent;
+			}
+			if (isDataValueColumn(currentSelection[0]) && isDataValueContainer(currentSelection[0].parent)) {
+				frame = currentSelection[0].parent;
+			}
             // ungroup all
-            const frame = currentSelection[0];
-            frame.layoutMode = "NONE";
-            frame.children.forEach(node => {
-                if (node.type == "INSTANCE" && node.mainComponent.id == ruleComponent.id) node.remove();
-                if (node.type == "FRAME" && node.layoutMode == "VERTICAL") {
-                    node.layoutMode = "NONE"
-                    node.children.forEach((child: SceneNode) => {
-                        frame.appendChild(child);
-                        child.x = node.x;
-                    });
-                    node.remove();
-                }
-            });
-          
-			dataValueLayout(frame.findAll(item => isDataValue(item)), frame, msg.configs);
+			if (frame) {
+				await unGroupFrame(frame);
+				dataValueLayout(frame.findAll(item => isDataValue(item)), frame, msg.configs);
+			}
+            
 		}
 	}
 }
 
 export const run = () => {
-	figma.showUI(__html__, {title: "Pixel DS - Vertical Data Value", width: 320, height: 240}) 
+	figma.showUI(__html__, {title: "Aperia DS - Vertical Data Value", width: 320, height: 240}) 
     postData({type: "vertical_data_value"});
 }

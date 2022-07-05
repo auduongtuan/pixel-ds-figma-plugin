@@ -1,47 +1,37 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Disclosure, Tip, Title, Checkbox, Button } from "react-figma-plugin-ds";
+import {MenuItem} from "./uiComponents";
 import * as ui from "./uiHelper";
 
 const GridHelper = ({data}) => {
     const [includeHeading, setIncludeHeading] = React.useState(false);
-    const selectInSameColumn = () => {
-        ui.postData({type: "select_same_column_cells", includeHeading: includeHeading})
-    }
-    const selectInSameRow = () => {
-        ui.postData({type: "select_same_row_cells"})
-    }
+
     return (
         <div className="p-16">
-        <h2 className="mt-0">Grid Helper</h2>
-        {
-            (data.isGrid || data.isGridCell) ? 
-        <p>{data.gridName && `Grid name: ${data.gridName}`}<br />{data.isGrid && "Grid selected"}{data.isGridCell && "Grid cell selected"}</p>
-        : <p>Please select Grid frame or Grid Cell instance.</p>
-        }
-        {/* {data.headings && <ul>{data.headings.map((heading: string, i: number) => <li key={i}>{heading}</li>)}</ul>} */}
-        <h4 className="mt-24 mb-0">Row/Column Helper</h4>
-        <div className="mt-0">
-        <Checkbox className="m-0 p-0" label="Include heading" onChange={value => setIncludeHeading(value)}></Checkbox>
-        </div>
-        <div className="mt-8">
-        <Button isSecondary onClick={selectInSameColumn}>Select same column</Button>
-        </div>
-        <div className="mt-8">
-        <Button isSecondary onClick={selectInSameRow}>Select same row</Button>
-        </div>
+        
+        {data.isGrid && <p>Grid selected</p>}
+        {data.isGridCol && <p>Grid Col selected</p>}
+        {data.isGridCell && <p>Grid Cell selected</p>}
+        {data.isGridHeading && <p>Grid Heading selected</p>}
 
-        <h4 className="mt-24 mb-0">Grid Options</h4>
-        <div className="mt-0">
-        <Checkbox className="m-0 p-0" label="Show Pagination" onChange={value => ui.postData({type:"toggle_grid_pagination", showPagination: value})}></Checkbox>
-        </div>
-        <div className="mt-0">
-        <Checkbox className="m-0 p-0" label="Show Horizontal Scroll"></Checkbox>
-        </div>
-        <div className="mt-0">
-        <Checkbox className="m-0 p-0" label="Show Vertical Scroll"></Checkbox>
-        </div>
-      
+        {!data.isGrid && !data.isGridCol && !data.isGridCell && !data.isGridHeading && <p>Please select Grid elements.</p>}
+        
+        <h4 className="mt-24 mb-8">Grid</h4>
+        <MenuItem onClick={() => ui.postData({type: "create_grid"})}>Create gird</MenuItem>
+        <MenuItem onClick={() => ui.postData({type: "update_grid"})}>Update gird</MenuItem>
+        
+        <h4 className="mt-24 mb-8">Row and Column</h4>
+        <MenuItem onClick={() => ui.postData({type: "sort_by_column_asc"})}>Sort gird by this column (ascending)</MenuItem>
+        <MenuItem onClick={() => ui.postData({type: "sort_by_column_desc"})}>Sort gird by this column (descending)</MenuItem>
+        <MenuItem onClick={() => ui.postData({type: "select_same_column_cells", includeHeading: false})}>Select same column</MenuItem>
+        <MenuItem onClick={() => ui.postData({type: "select_same_column_cells", includeHeading: true})}>Select same column (include heading)</MenuItem>
+        <MenuItem onClick={() => ui.postData({type: "select_same_row_cells"})}>Select same row</MenuItem>
+
+        <h4 className="mt-24 mb-8">Grid Options</h4>
+        {/* <MenuItem onClick={() => ui.postData({type: "toggle_grid_pagination"})}>Toggle grid pagination</MenuItem> */}
+        <MenuItem onClick={() => ui.postData({type: "toggle_horizontal_scroll"})}>Toggle horizontal scrollbar</MenuItem>
+        <MenuItem onClick={() => ui.postData({type: "toggle_vertical_scroll"})}>Toggle vertical scrollbar</MenuItem>  
         </div>
     )
 }

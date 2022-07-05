@@ -106,11 +106,18 @@ $breakpoint_values: (
     grid-template-columns: repeat(var(--col), 1fr);
     gap: var(--gap);   
 }
-
+.flex {
+  --gap: 0;
+  display: flex;
+  gap: var(--gap);
+}
 body {
   font-size: 12px;
 }
 
+textarea {
+  font-family: "Inter", sans-serif;
+}
 .checkbox {
   margin-top: -12px;
 }
@@ -126,6 +133,36 @@ body {
   border-color: var(--black1);
 }
 
+.show-border .select-menu__button {
+  border-color: var(--black1);
+  .select-menu__caret {
+    margin-left: auto;
+    margin-right: -8px;
+  }
+}
+
+
 label {
     display: block;
+}
+
+.menu-item {
+  background: var(--white);
+  border: none;
+  border-bottom: 1px solid var(--black1);
+  color: var(--black8);
+  font-family: var(--font-stack);
+  font-size: var(--font-size-xsmall);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-line-height);
+  letter-spacing: var(--font-letter-spacing-pos-xsmall);
+  padding: 8px 8px;
+  margin: 0 -8px;
+  width: 100%;
+  text-align: left;
+  display: block;
+  cursor: pointer;
+  &:hover {
+    background: var(--grey);
+  }
 }

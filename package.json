@@ -1,13 +1,13 @@
 {
   "name": "pixel-ds-figma",
   "version": "0.0.1",
-  "description": "Figma plugin supporting for Pixel DS",
+  "description": "Figma plugin supporting for Aperia DS",
   "source": "src/ui.html",
   "main": "code.js",
   "scripts": {
     "start": "yarn parcel watch src/ui.html src/code.ts --target figma-dev",
     "serve": "npx webpack serve --mode=development",
-    "watch": "npx webpack --mode=development --watch",
+    "dev": "npx webpack --mode=development --watch",
     "build": "tsc -p tsconfig.json"
   },
   "targets": {
@@ -45,6 +45,7 @@
   "dependencies": {
     "figma-plugin-ds": "^1.0.1",
     "lodash": "^4.17.21",
+    "prismjs": "^1.28.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-figma-plugin-ds": "^2.3.0"
