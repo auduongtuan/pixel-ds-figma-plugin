@@ -23,7 +23,6 @@
   "license": "",
   "devDependencies": {
     "@figma/plugin-typings": "^1.38.0",
-    "@parcel/transformer-typescript-tsc": "^2.0.0",
     "@types/lodash": "^4.14.176",
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",

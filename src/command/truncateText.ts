@@ -121,18 +121,24 @@ export async function textNodeTruncate(textNode: TextNode, truncateFunction: Fun
 			textNode.characters = rawCharacters;
 		}
 		const textNodeWrapperInnerWidth = textNodeWrapper.width - textNodeWrapper.paddingLeft - textNodeWrapper.paddingRight;
+
 		if(textNodeWrapperInnerWidth < textNode.width) {
 			const ratio = textNodeWrapperInnerWidth / textNode.width;
 			const originalLength = textNode.characters.length;
 			let truncatedLength = Math.ceil(originalLength * ratio);
-
-			
+			// calculate other items width
+			let otherItemWidth = 0;
+			textNodeWrapper.children.filter(node => node.id != textNode.id).forEach(node => {
+				otherItemWidth += node.width + textNodeWrapper.itemSpacing;
+			});
+			// ignore vertical auto layout case
+			if(textNodeWrapper.layoutMode == 'VERTICAL') otherItemWidth = 0;
 			// test shrink
 			let shrink = true;
 			let tryShrinkLenth = truncatedLength;
 			while(shrink) {
 				textNode.characters = truncateFunction(rawCharacters, tryShrinkLenth); //test
-				if (textNode.width <= textNodeWrapperInnerWidth) {
+				if (textNode.width+otherItemWidth <= textNodeWrapperInnerWidth) {
 					shrink = false;
 				}
 				else {
@@ -144,7 +150,7 @@ export async function textNodeTruncate(textNode: TextNode, truncateFunction: Fun
 			let tryExtendLenth = tryShrinkLenth;
 			while(extend) {
 				textNode.characters = truncateFunction(rawCharacters, tryExtendLenth+1); //test
-				if (textNode.width >= textNodeWrapperInnerWidth) {
+				if (textNode.width+otherItemWidth >= textNodeWrapperInnerWidth) {
 					extend = false;
 					// back to previous if overflow
 					textNode.characters = truncateFunction(rawCharacters, tryExtendLenth);

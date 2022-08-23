@@ -853,21 +853,6 @@
     posthtml-render "^3.0.0"
     semver "^5.4.1"
 
-"@parcel/transformer-typescript-tsc@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@parcel/transformer-typescript-tsc/-/transformer-typescript-tsc-2.0.0.tgz#65ac167060ccf3f4f82ce4d6a9f4406b1711bb76"
-  integrity sha512-sOhgf/AmPp15pk2XSBXGuelPh9iFuQ+Y5W1KXAlHlIxqk+K4BJiMb7F/trqySyekIhwIpI2QoS7E921AshSZ3g==
-  dependencies:
-    "@parcel/plugin" "^2.0.0"
-    "@parcel/ts-utils" "^2.0.0"
-
-"@parcel/ts-utils@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@parcel/ts-utils/-/ts-utils-2.0.0.tgz#89954d341a8942cb6ddcda217f5f7b38914bef12"
-  integrity sha512-+jMwsBu5+gyp8iw+h6CN1MR8hYDALdO1ccphHPD2WMzQHpvvp+hhZ/gUfN70ioPz9DOG/d6BMlfm/HVaZLePsA==
-  dependencies:
-    nullthrows "^1.1.1"
-
 "@parcel/types@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@parcel/types/-/types-2.0.0.tgz#31f6eb7c24b2d9ae752ce49adaf01469a9e9067a"

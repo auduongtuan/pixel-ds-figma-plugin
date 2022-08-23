@@ -32,6 +32,14 @@ export const getComponent = (node: InstanceNode): ComponentNode | ComponentSetNo
 	return node.mainComponent;
 }
 
+export const getData = (node: SceneNode, key: string) => {
+	return node.getSharedPluginData('aperia', key);
+}
+
+export const setData = (node: SceneNode, key: string, value: string) => {
+	node.setSharedPluginData('aperia', key, value);
+}
+
 export const getDS = (node: SceneNode): 'bootstrap' | 'pixel' | string => {
 	return node.getSharedPluginData('aperia', 'ds');
 }
