@@ -13,6 +13,11 @@
     "typeRoots": [
       "./node_modules/@types",
       "./node_modules/@figma"
+    ],
+    "lib": [
+      "es2018",
+      "es2019",
+      "dom"
     ]
   }
 }
