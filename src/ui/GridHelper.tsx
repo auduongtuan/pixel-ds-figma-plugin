@@ -9,7 +9,6 @@ const GridHelper = ({data}) => {
 
     return (
         <div className="p-16">
-        
         {data.isGrid && <p>Grid selected</p>}
         {data.isGridCol && <p>Grid Col selected</p>}
         {data.isGridCell && <p>Grid Cell selected</p>}

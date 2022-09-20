@@ -3,12 +3,12 @@ import {render} from 'react-dom'
 import { useState, useEffect } from 'react'
 
 import "react-figma-plugin-ds/figma-plugin-ds.css";
-import "./ui/ui.scss";
-import GridHelper from './ui/GridHelper';
-import VerticalDataValue from './ui/VerticalDataValue';
-import PluginData from './ui/PluginData';
-import MultiSelect from './ui/MultiSelect';
-import CodeHighlighter from './ui/CodeHighlighter';
+import "./ui.scss";
+import GridHelper from './GridHelper';
+import VerticalDataValue from './VerticalDataValue';
+import PluginData from './PluginData';
+import MultiSelect from './MultiSelect';
+import CodeHighlighter from './CodeHighlighter';
 
 
 const App = () => {
@@ -46,4 +46,4 @@ const App = () => {
 
 }
 
-render(<App />, document.getElementById('react-page'))
+render(<App />, document.getElementById('root'))

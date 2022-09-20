@@ -1,16 +1,17 @@
 import * as _ from "lodash"
-import {truncateInit, truncateSetup} from "./command/truncateText"
-import * as h from "./command/commandHelper"
-import * as verticalDataValue from "./command/verticalDataValue_v2"
-import * as gridHelper from "./command/gridHelper"
-import * as tabBar from "./command/tabBar"
-import * as avatar from "./command/avatar"
-import toggleSensitiveMask from "./command/toggleSensitiveMask"
-import textBoxTextAreaInt from "./command/textArea"
-import multiSelect from "./command/multiSelect"
-import * as codeHighlighter from "./command/codeHighlighter";
-import test from "./command/test";
-import pluginData from './command/pluginData'
+import {truncateInit, truncateSetup} from "./truncateText"
+import * as h from "./commandHelper"
+import * as verticalDataValue from "./verticalDataValue_v2"
+import * as gridHelper from "./gridHelper"
+import * as tabBar from "./tabBar"
+import * as avatar from "./avatar"
+import toggleSensitiveMask from "./toggleSensitiveMask"
+import textBoxTextAreaInt from "./textArea"
+import multiSelect from "./multiSelect"
+import getDsKeys from "./getDsKeys"
+import * as codeHighlighter from "./codeHighlighter";
+import test from "./test";
+import pluginData from './pluginData'
 
 const dsFonts = [
   {family: "Inter", style: "Regular"},
@@ -26,7 +27,7 @@ const uiCommands = {
   "vertical_data_value": verticalDataValue,
   "multiselect": multiSelect,
   "plugin_data": pluginData,
-  "test": test,
+  // "test": test,
   "codehighlighter": codeHighlighter.codeHighlighter,
 }
 
@@ -47,6 +48,7 @@ const nonuiCommands = {
   "grid_toggle_horizontal_scroll": gridHelper.toggleHorizontalScroll,
   "grid_toggle_vertical_scroll": gridHelper.toggleVerticalScroll,
   "codehighlighter_init": codeHighlighter.init,
+  "get_ds_keys": getDsKeys
 }
 
 figma.ui.onmessage = msg => {

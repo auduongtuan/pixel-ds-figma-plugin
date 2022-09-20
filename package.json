@@ -5,41 +5,36 @@
   "source": "src/ui.html",
   "main": "code.js",
   "scripts": {
-    "start": "yarn parcel watch src/ui.html src/code.ts --target figma-dev",
-    "serve": "npx webpack serve --mode=development",
-    "dev": "npx webpack --mode=development --watch",
-    "build": "tsc -p tsconfig.json"
+    "test": "npm run tsc && npm run build",
+    "format": "prettier --write .",
+    "tsc": "npm run tsc:main && npm run tsc:ui",
+    "tsc:main": "tsc --noEmit -p src/command",
+    "tsc:ui": "tsc --noEmit -p src/ui",
+    "tsc:watch": "concurrently -n plugin,iframe \"npm run tsc:main -- --watch --preserveWatchOutput\" \"npm run tsc:ui -- --watch --preserveWatchOutput\"",
+    "build": "npm run build:ui && npm run build:main -- --minify",
+    "build:main-old": "esbuild src/code.ts --bundle --outfile=dist/code.js",
+    "build:main": "node ./esbuild.js",
+    "build:ui": "npx vite build --minify esbuild --emptyOutDir=false",
+    "build:watch": "concurrently -n plugin,iframe \"npm run build:main -- --watch\" \"npm run build:ui -- --watch\"",
+    "dev": "concurrently -n tsc,build,vite 'npm:tsc:watch' 'npm:build:watch' 'vite'",
+    "dev-test": "npm run build:main -- --watch"
   },
-  "targets": {
-    "figma-dev": {
-      "context": "electron-main",
-      "sourceMap": {
-        "inline": true,
-        "inlineSources": true
-      }
-    }
-  },
-  "author": "",
+  "author": "Tuan Au Duong",
   "license": "",
   "devDependencies": {
     "@figma/plugin-typings": "^1.38.0",
     "@types/lodash": "^4.14.176",
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
-    "css-loader": "^6.5.1",
-    "html-webpack-inline-source-plugin": "^1.0.0-beta.2",
-    "html-webpack-plugin": "^5.5.0",
-    "parcel": "^2.0.0",
-    "sass": "^1.43.4",
-    "sass-loader": "^12.3.0",
-    "style-loader": "^3.3.1",
-    "ts-loader": "^9.2.6",
+    "@vitejs/plugin-react": "^2.1.0",
+    "concurrently": "^6.3.0",
+    "esbuild": "^0.13.5",
+    "prettier": "^2.3.2",
     "typescript": "^4.4.4",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.61.0",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.4.0",
-    "webpack-shell-plugin-next": "^2.2.2"
+    "vite": "^3.1.3",
+    "vite-plugin-singlefile": "^0.11.1",
+    "vite-svg-loader": "^3.6.0",
+    "sass": "^1.54.9"
   },
   "dependencies": {
     "figma-plugin-ds": "^1.0.1",

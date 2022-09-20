@@ -1,18 +1,15 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "outDir": "dist",
-    "jsx": "react",
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "lib": ["es6","DOM"],
+    "strict": false,
     "experimentalDecorators": true,
     "removeComments": true,
     "noImplicitAny": false,
     "moduleResolution": "node",
+    "skipLibCheck": true,
     "typeRoots": [
-      "./node_modules/@types",
-      "./node_modules/@figma"
+      "../../node_modules/@types",
+      "../../node_modules/@figma"
     ],
     "lib": [
       "es2018",
