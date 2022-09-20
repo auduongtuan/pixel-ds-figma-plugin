@@ -77,10 +77,10 @@ export const isFrame = (node: BaseNode): node is FrameNode => {
 
 
 export const isInstance = (node: BaseNode, componentName: string | null = null): node is InstanceNode => {
-	if (componentName && bootstrapComponents[componentName])
-	{
-		return node && node.type == "INSTANCE" && node.mainComponent.key == bootstrapComponents[componentName];
-	}
+	// if (componentName && bootstrapComponents[componentName])
+	// {
+	// 	return node && node.type == "INSTANCE" && node.mainComponent.key == bootstrapComponents[componentName].key;
+	// }
 	if (componentName) {
 		return node && node.type == "INSTANCE" && ((node.mainComponent && node.mainComponent.name == componentName) || (node.mainComponent.parent && node.mainComponent.parent.name == componentName));
 	}
