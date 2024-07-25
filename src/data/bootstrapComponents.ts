@@ -1,1347 +1,1185 @@
-const oldComponents = {
-  "Small Chip": "be448740c0bea40c519c7eab7d85d44a9249db8b"
-}
 const components = {
-  "Loading": {
-    "key": "823e066150daa0489f6e502a57c3fe2003e8953b",
-    "type": "COMPONENT_SET"
+  Loading: {
+    key: "9693e747e043331535f17d4948dd118e6d06b64a",
+    type: "COMPONENT_SET",
   },
-  "Cursor": {
-    "key": "c6c141d18bbeb59ad12ad1216e28d897927c6048",
-    "type": "COMPONENT_SET"
+  Cursor: {
+    key: "7ed58ee848c5bdff6ef5f24340055c0919eae847",
+    type: "COMPONENT_SET",
   },
-  "Pointer": {
-    "key": "b8299fee6f5e2f4bb325dd7b589801013356fe43",
-    "type": "COMPONENT"
+  Pointer: {
+    key: "c3938b2bd4ce6f49c232be34f21651c820be0743",
+    type: "COMPONENT",
   },
   "Help Text": {
-    "key": "63f798fb371f2b44abf4932ddb23a651b0429a50",
-    "type": "COMPONENT"
+    key: "84b23d85d569ebdfe1e7e563a7fa03f254f98eb6",
+    type: "COMPONENT",
   },
-  "Divider": {
-    "key": "0d90722e9c87044fcf1657327b63a3947d996ce4",
-    "type": "COMPONENT_SET"
+  Divider: {
+    key: "12f7982a0426ea74b3e0a701c4fb7c5d40b7bb7d",
+    type: "COMPONENT_SET",
   },
-  "Slot": {
-    "key": "be16549a0811164796e2849c00b3204d6ab0271f",
-    "type": "COMPONENT_SET"
+  Slot: {
+    key: "a0d3b697cceb9132e116058e566a3882163488e7",
+    type: "COMPONENT_SET",
   },
   "Fiserv Logo": {
-    "key": "ba08483f1760352ac69742003cabbd430216c6d1",
-    "type": "COMPONENT"
+    key: "109d3ce0627963ac1c390138ef1d7e0664deb94b",
+    type: "COMPONENT",
   },
   "Native Scrollbar": {
-    "key": "9cc6e1cf3bb5c4b33491cc478537b7009ae76a05",
-    "type": "COMPONENT_SET"
+    key: "493ce2600e92e632e4dcbf963743ab3ba3f4659c",
+    type: "COMPONENT_SET",
   },
   "Native Scrollbar/Vertical/Start": {
-    "key": "91bbbefe1011481317a308fe30d3222429da7cc1",
-    "type": "COMPONENT"
+    key: "79eb3ff997726e74511cddbcf46636acb69bacfc",
+    type: "COMPONENT",
   },
   "Custom Scrollbar": {
-    "key": "fd9d7fd3f86840a86cc9f068580aa0b16c4a7f7b",
-    "type": "COMPONENT_SET"
+    key: "adddde4c9926f6c97306d083f20bfa6afdc08799",
+    type: "COMPONENT_SET",
   },
-  "Truncate": {
-    "key": "beac49b7145b13b05be07672af2d625a09666733",
-    "type": "COMPONENT"
+  Truncate: {
+    key: "87280e395c04f5412563c0200626bd095ae1320c",
+    type: "COMPONENT",
   },
-  "lock": {
-    "key": "5f1713de881a893caab5868f9a7d3b2dc1f799d5",
-    "type": "COMPONENT"
+  lock: { key: "86d928718313d6e952da6221eac01b6421271350", type: "COMPONENT" },
+  workflow: {
+    key: "18a2e182da2d743b3639785f277dc0ceeaa0eb08",
+    type: "COMPONENT",
   },
-  "workflow": {
-    "key": "355f4f6082cdeeba2233dee0a3fbcd8e5c62122e",
-    "type": "COMPONENT"
-  },
-  "notification": {
-    "key": "a8f7cde57b1629c0a6943fd64bc0c8e9bbdb81df",
-    "type": "COMPONENT"
+  notification: {
+    key: "97007cb29fef37e23538ab4e6b7d464ae5d7c0e2",
+    type: "COMPONENT",
   },
   "notification-manage": {
-    "key": "e92f7971767630ec7e9380c73a15aabf324643ad",
-    "type": "COMPONENT"
+    key: "e673d8d7722f7dee1b8d50582f2d8ec0f2b1b45b",
+    type: "COMPONENT",
   },
   "email-send": {
-    "key": "39ba12be8e5f9ce378267a8b8e50450ca19f9d46",
-    "type": "COMPONENT"
+    key: "5c1a3d3d457fda390cf015600f31917607368105",
+    type: "COMPONENT",
   },
-  "cardholder": {
-    "key": "1bb7cc9b66036475be7bf1fe4f7f5c1e0795bcb1",
-    "type": "COMPONENT"
+  cardholder: {
+    key: "1d229cef7c0d0d85be0525ad76678415ea9cf4d1",
+    type: "COMPONENT",
   },
   "client-contact": {
-    "key": "663eea6993a18f099f3ddacc7a4e20c46a17b108",
-    "type": "COMPONENT"
+    key: "f63d83ef5a9ad0ef689800a9846d398a78503d69",
+    type: "COMPONENT",
   },
-  "change": {
-    "key": "767e891834eb9653fe358c497edcb4229689e29e",
-    "type": "COMPONENT"
+  change: {
+    key: "dffe92321bd7a206133e7a3428ec68626ee21768",
+    type: "COMPONENT",
   },
   "card-collection": {
-    "key": "ee203c62f66b1781ffb2286e34958feb13296c4b",
-    "type": "COMPONENT"
+    key: "c95ae04ff0097e2d6cfdc7d6016325a73f0dfc9c",
+    type: "COMPONENT",
   },
-  "chat": {
-    "key": "0f155b97523fe0f12a3ccf11533b527318d04d69",
-    "type": "COMPONENT"
-  },
+  chat: { key: "9bc2daafe7bd8676c58c4e97dd90fc81f1488712", type: "COMPONENT" },
   "chevron-right": {
-    "key": "39a993f6d69d224ab51084d51517bf84c3e0d547",
-    "type": "COMPONENT"
+    key: "4ec2bf2236d108f47afbf0880aa3ea764bf271ba",
+    type: "COMPONENT",
   },
   "chevron-up": {
-    "key": "b86c1fbf0485e0da30fdea3d0c752ac971a0bbe8",
-    "type": "COMPONENT"
+    key: "b6d0849d7b0da60382682e44da52c37e211bceea",
+    type: "COMPONENT",
   },
-  "error": {
-    "key": "cbf323f7dccb04a901d057a5c1dde3ec46b941ca",
-    "type": "COMPONENT"
+  error: { key: "caf09d12fb232d38837c451fb965a404010b1741", type: "COMPONENT" },
+  success: {
+    key: "af3a332b6ea8ef619b3351b561d8249de532cbd5",
+    type: "COMPONENT",
   },
-  "success": {
-    "key": "e36ed616f094f23bbe295b444e4cf3c1432fc38d",
-    "type": "COMPONENT"
-  },
-  "eye": {
-    "key": "064f806a4fb348bef475b2f2096550f0384ad5fb",
-    "type": "COMPONENT"
-  },
-  "search": {
-    "key": "9c99e48686b7698eba96a4785c9524729117393d",
-    "type": "COMPONENT"
+  eye: { key: "94e2beff26ecf3a281500c4a64533dbf9002c911", type: "COMPONENT" },
+  search: {
+    key: "f7af640d6e2cb35139e744660c731162a90a2b06",
+    type: "COMPONENT",
   },
   "search-result": {
-    "key": "6108104dc05e6a97b41467afc0c220a948c538cc",
-    "type": "COMPONENT"
+    key: "9ccaab9d6efbc0baf0786d530b72b8db78eee8d6",
+    type: "COMPONENT",
   },
   "account-details": {
-    "key": "73d8715c27d35ec4164851c06389b8a1c7024433",
-    "type": "COMPONENT"
+    key: "a61949d156f0e95cb45314a219b64f4ca59337ee",
+    type: "COMPONENT",
   },
   "push-right": {
-    "key": "fb314b1f75082a1813493bc44328e6dc7b220bd2",
-    "type": "COMPONENT"
+    key: "c8d946d612e95ab9dc51f129cf4d7a9e013f9720",
+    type: "COMPONENT",
   },
   "push-left": {
-    "key": "1c238c6fe0c9fa8672cbcd2e8eba2f870c4c74f7",
-    "type": "COMPONENT"
+    key: "6295c5e077f0a9dd793f87faff20fd063ed55c7c",
+    type: "COMPONENT",
   },
-  "fullscreen": {
-    "key": "2781d250a18b56c1262de8e04a6874d1080b76a5",
-    "type": "COMPONENT"
+  fullscreen: {
+    key: "f06ced644c70f9e6e156b92e33408c957920b010",
+    type: "COMPONENT",
   },
   "rating-line": {
-    "key": "d407e53aee39488d9565bd3fbd028e847720371a",
-    "type": "COMPONENT"
+    key: "0524fab9a75af78260e4df9f1491f68cd147a726",
+    type: "COMPONENT",
   },
-  "filter": {
-    "key": "7ddc29865c9384d75b475359b256db2f1edebb72",
-    "type": "COMPONENT"
+  filter: {
+    key: "e12352df007acdbf7c929ab3238e00e259773476",
+    type: "COMPONENT",
   },
   "product-info": {
-    "key": "a7b2e8587b20180712206e421e96f071a7f39844",
-    "type": "COMPONENT"
+    key: "3bed1281b770348beea75df25072d60c3793f1a7",
+    type: "COMPONENT",
   },
   "method-clone": {
-    "key": "b49f65f15c1b784f7357ae3541721c3bed74514b",
-    "type": "COMPONENT"
+    key: "0751ebce5b63ef7ce4d726330b8a012f378da4eb",
+    type: "COMPONENT",
   },
   "price-strategy": {
-    "key": "1fe1052da22d4df53a7c31caf74f1336e610a0b1",
-    "type": "COMPONENT"
+    key: "437816a7dc58c0fef8b32c1000683b2d0ebbdbd2",
+    type: "COMPONENT",
   },
   "price-manage": {
-    "key": "8b9b7e8ecddbc9bafc5d9c243a117adb5e3fdd88",
-    "type": "COMPONENT"
+    key: "a15295dfdadacb6e9e55c9121dbf9083263efefc",
+    type: "COMPONENT",
   },
   "most-view-articles": {
-    "key": "598a8a58cbdc1e451463758f6dcae52ae6a3cd71",
-    "type": "COMPONENT"
+    key: "45fd1083387498ce7ad5d77b7f68736aa60bf81b",
+    type: "COMPONENT",
   },
   "knowledge-base": {
-    "key": "238f47292daef4e905c23d11ef15a83c49534d4e",
-    "type": "COMPONENT"
+    key: "5ea60d6f4b3e2bd399a958f0c14c5644a84226da",
+    type: "COMPONENT",
   },
   "article-id": {
-    "key": "19c15f6c352e8564430d1cc685c2fe5bf05e512d",
-    "type": "COMPONENT"
+    key: "1f2d564142276542e648916d3811c6d23bccf5d8",
+    type: "COMPONENT",
   },
-  "billing": {
-    "key": "ea47ed88032da8eb3d06593598f3c5d9b5a94e5d",
-    "type": "COMPONENT"
+  billing: {
+    key: "89163b3990d90285ea776fb7d35c929ce4d5c327",
+    type: "COMPONENT",
   },
   "client-communications": {
-    "key": "fea24c6aee06b8fe8257a4acac00e2663bdc941e",
-    "type": "COMPONENT"
+    key: "9440415df6b9402b29cb2c7abceacf7adfd592e2",
+    type: "COMPONENT",
   },
   "system-status": {
-    "key": "ebc42af1e53fd50f3bb821e5593c737429e79f77",
-    "type": "COMPONENT"
+    key: "7b7444df3cac71c56dcb0ff5e2f3af5c9b9f0cb8",
+    type: "COMPONENT",
   },
-  "comingsoon": {
-    "key": "c2e38c360210d273216dc05c19d88a0ba64fe0b9",
-    "type": "COMPONENT"
+  comingsoon: {
+    key: "ded6054e2f7e8549d4e77c3aa407867cc7ee9928",
+    type: "COMPONENT",
   },
-  "request": {
-    "key": "3796f6041c7bed6bada4de87e6a81a56ffa68d1f",
-    "type": "COMPONENT"
+  request: {
+    key: "b1abce561156fa6d6cba833fa80f9ff3811257ed",
+    type: "COMPONENT",
   },
-  "more": {
-    "key": "b20e7f06b9cd4a53507cbaec468bf57a6723c62d",
-    "type": "COMPONENT"
-  },
+  more: { key: "c12ab117abb090e536a26ab5025d308457012ca8", type: "COMPONENT" },
   "more-vertical": {
-    "key": "6343b5e272649339d99e7f4a0da4b99daf3fb515",
-    "type": "COMPONENT"
+    key: "03c54d0ba20ac3183e711b1d0a1454e5459870ad",
+    type: "COMPONENT",
   },
   "expand-vertical": {
-    "key": "36e3f13197a4b3d08c6eef1d1e9aeb1397f86252",
-    "type": "COMPONENT"
+    key: "2cc9b1eb3fe734d7bbf29210203354d430a3acc8",
+    type: "COMPONENT",
   },
   "collapse-vertical": {
-    "key": "6ac105e599c5d5604dbf3cdd2d94ba1ab4c08f01",
-    "type": "COMPONENT"
+    key: "ac6b8bfb0e93efb6bac240f7d2bc732c6a389b52",
+    type: "COMPONENT",
   },
-  "file": {
-    "key": "513f5dea07b87187a0db2f772652d988eefe4509",
-    "type": "COMPONENT"
+  file: { key: "10a8393ad47552caa1ff5b4a4f93ff8d4c8cdd39", type: "COMPONENT" },
+  download: {
+    key: "690e92c91aa91f57f623fcd43052e948da3abe6c",
+    type: "COMPONENT",
   },
-  "download": {
-    "key": "913af4bd09980cb360a759739b690e9cf1bf1ab5",
-    "type": "COMPONENT"
+  infomation: {
+    key: "553730de769569dd72da122c6f583ce6391cd87e",
+    type: "COMPONENT",
   },
-  "infomation": {
-    "key": "9c85919c407b7415ba3882ea3684cc7421c0445c",
-    "type": "COMPONENT"
-  },
-  "cross": {
-    "key": "f463b956d090bce09c94e1e045b48e824e8bf87e",
-    "type": "COMPONENT"
-  },
+  cross: { key: "8e2e86e2d776f5ccf13a956b8ca1576d47f3d6fa", type: "COMPONENT" },
   "view-list": {
-    "key": "4e2562e3deadb7ccb70b149bfd37d5d3cd9f38ec",
-    "type": "COMPONENT"
+    key: "269e13fa5ec46305997d4356cfa730ae463f6949",
+    type: "COMPONENT",
   },
   "view-grid": {
-    "key": "cc2cff1e0dd5ff73d655b1d8f347d6f30b384f99",
-    "type": "COMPONENT"
+    key: "8d4269d42471189901706ff640a43a3ce3020971",
+    type: "COMPONENT",
   },
-  "edit": {
-    "key": "89c736bd2b1013cb174cbb43aacc938a3fc6f8fd",
-    "type": "COMPONENT"
-  },
+  edit: { key: "cac3d2ac146926e4f91b00e517b1c9b9c85a4382", type: "COMPONENT" },
   "add-file": {
-    "key": "c8d9debfc05bdb47bfe50d021192120363dd2d84",
-    "type": "COMPONENT"
+    key: "5ae95c947554a8c94ab5d2dc8f173b251e1f1e6c",
+    type: "COMPONENT",
   },
   "method-add": {
-    "key": "35450ad3e00c6afb6193bdcc5eff3357e3578a55",
-    "type": "COMPONENT"
+    key: "4e34af4d042de5f50df73d2ea393405874fd1e67",
+    type: "COMPONENT",
   },
   "method-create": {
-    "key": "4bc565e2e1f30583f347c80da69b79486c2ed3b6",
-    "type": "COMPONENT"
+    key: "2f9e4954ecfab0e065457b3596caa17173e85dce",
+    type: "COMPONENT",
   },
-  "print": {
-    "key": "4408aa40bfbe2ee102169e1dc7c6c5ef66ece169",
-    "type": "COMPONENT"
+  print: { key: "9df85a2dfc4ce169dbf773a719e84cd1ace3b436", type: "COMPONENT" },
+  community: {
+    key: "2b6fb95236154e599b7099773f9ab5a4a9604abd",
+    type: "COMPONENT",
   },
-  "community": {
-    "key": "f7d95e47c01d56e1039d78ff982c529a6ef8b26a",
-    "type": "COMPONENT"
-  },
-  "close": {
-    "key": "afc3aa890ad3672c0ee6370530f37b36aa0a47e9",
-    "type": "COMPONENT"
-  },
+  close: { key: "596ff0d5df22c3b90132e7a0af14c98245e2c3ae", type: "COMPONENT" },
   "arrow-up": {
-    "key": "d230d1c9cb79aa18194caeda73dc11d7ebe671d3",
-    "type": "COMPONENT"
+    key: "5e201e96b8fc5df27b4faeaed7d4ee50ec709b86",
+    type: "COMPONENT",
   },
   "arrow-right": {
-    "key": "c5d79775776c49819cb4355016a452721271ddde",
-    "type": "COMPONENT"
+    key: "ab9cf0c47b4f78561180507ddc64251ea1464be0",
+    type: "COMPONENT",
   },
   "chevron-left": {
-    "key": "5bef73436c8ecf4dfe5f9e2622d9cfb3aff86384",
-    "type": "COMPONENT"
+    key: "f174d80bd0d75acfe745a1ae4320a4c9d32b2a29",
+    type: "COMPONENT",
   },
-  "services": {
-    "key": "79eb5ad2c24bd497510c973a01234ce8990dd711",
-    "type": "COMPONENT"
+  services: {
+    key: "c31261498983f6c130a649c692a3c4ff8f762202",
+    type: "COMPONENT",
   },
   "exit-fullscreen": {
-    "key": "cd33f27af3d2c913a6fd0a024e1058654335b97e",
-    "type": "COMPONENT"
+    key: "ea20675d58521d853511a26a9479e19d322108c9",
+    type: "COMPONENT",
   },
   "chevron-down": {
-    "key": "51348bdab33078074281841879a92b65c1e42d44",
-    "type": "COMPONENT"
+    key: "9bd1a10e481643d68bb1ecd5bbfc8805a61ee447",
+    type: "COMPONENT",
   },
   "arrow-left": {
-    "key": "fe66290306763b00d1e18c2341bac142a7d64195",
-    "type": "COMPONENT"
+    key: "8b8a49a382b5fce9d09e2936d8d1c30e9d0b1907",
+    type: "COMPONENT",
   },
   "approve-chain": {
-    "key": "22d400e9c3dd5c0cb9459430c19f65fdebb359f7",
-    "type": "COMPONENT"
+    key: "015ba93404a3fa7279d4891331157ea755528c81",
+    type: "COMPONENT",
   },
   "account-change": {
-    "key": "c49ad521c53d2cce187703f92d53c3dcb9d13a49",
-    "type": "COMPONENT"
+    key: "d81db763a6fa77974fdbf0546acb5200b82601fe",
+    type: "COMPONENT",
   },
   "credit-flow": {
-    "key": "fe1687cc1c12f277cedc5634afee509cb80cfa88",
-    "type": "COMPONENT"
+    key: "544f55368271612cbf889a73e9b7627c5e204baa",
+    type: "COMPONENT",
   },
   "card-new": {
-    "key": "f1a55626224fd3b036afdf7021d13e10890f7729",
-    "type": "COMPONENT"
+    key: "5e228a14840f0456358521e55938478e265a6f8b",
+    type: "COMPONENT",
   },
   "fee-penalty": {
-    "key": "f527b1a5f69b2ee93460328f2f0b47cd934097af",
-    "type": "COMPONENT"
+    key: "7f91db035383bf6f9439aea0aa7e9d4633c0e12a",
+    type: "COMPONENT",
   },
   "run-transaction": {
-    "key": "29aa3d561c67431f9eb691fc233242f72ff74180",
-    "type": "COMPONENT"
+    key: "70fd5a3bcf8e36a7a901e011f9090d1fcf9ae214",
+    type: "COMPONENT",
   },
   "account-level": {
-    "key": "ef2e9d49abf097ac76de0413ad987070e062177c",
-    "type": "COMPONENT"
+    key: "fae0b1946fcb815b3b64b25b435a97d8052f71bf",
+    type: "COMPONENT",
   },
-  "bold": {
-    "key": "82cd84bfc30d37c45a166cd3d4a9627c624159fe",
-    "type": "COMPONENT"
+  bold: { key: "d1c884cc820e47673bce40cda58c0269ed97318d", type: "COMPONENT" },
+  italic: {
+    key: "e20f8092257de992a952765ce1cf0bf76a07ecc5",
+    type: "COMPONENT",
   },
-  "italic": {
-    "key": "29256397dc8c2ce8b59e1c180d0a6170852a9852",
-    "type": "COMPONENT"
-  },
-  "underline": {
-    "key": "afe893ea0e82d10ae57904f2ca86482dc5366c6f",
-    "type": "COMPONENT"
+  underline: {
+    key: "05b9c276d9e1759cc2f24c9ecedc8aa5a2aef20e",
+    type: "COMPONENT",
   },
   "align-left": {
-    "key": "d156c6fb0d0ea3f173bb6a12714d22e583619d6b",
-    "type": "COMPONENT"
+    key: "c7c0dc80702149befff16b87cd664427e3ceabf4",
+    type: "COMPONENT",
   },
   "align-center": {
-    "key": "857bb615e3e08c9a335b730ce37ae495c890c95e",
-    "type": "COMPONENT"
+    key: "bbbb7b3582300a0068c88655db79e8510f40c0d4",
+    type: "COMPONENT",
   },
   "align-right": {
-    "key": "9181f49cb908b05cc2a110c5ac695725e2a9a5cd",
-    "type": "COMPONENT"
+    key: "822e0f066e373b65958079877d1702bf1e924e1c",
+    type: "COMPONENT",
   },
-  "drag": {
-    "key": "3c4628699eefc8e4e4712769daca544a1fcc2f4a",
-    "type": "COMPONENT"
+  drag: { key: "6d86a19521795f732fb55206098106e51aa4ea91", type: "COMPONENT" },
+  indent: {
+    key: "d4015941a7a04d63e0b8ab6b839617aee21ac7d6",
+    type: "COMPONENT",
   },
-  "indent": {
-    "key": "f0f0076554a7533bea99556a7f365bfa46650fcf",
-    "type": "COMPONENT"
-  },
-  "outdent": {
-    "key": "290015829d60e1e660d15238b36fc26b266fb029",
-    "type": "COMPONENT"
+  outdent: {
+    key: "18a8e9728366f67173603e06d15dd0da4c544ed5",
+    type: "COMPONENT",
   },
   "list-bullet": {
-    "key": "40b3573d0c5cbe83443c6babfcc4bee13ac83700",
-    "type": "COMPONENT"
+    key: "6831d60743629555892fcc87f0c1150bef05220a",
+    type: "COMPONENT",
   },
   "list-number": {
-    "key": "1bb6834b727b85cb9495e8398c5765145610898e",
-    "type": "COMPONENT"
+    key: "31d2f5bcb1c41221b98d3c054752da34273062c4",
+    type: "COMPONENT",
   },
-  "link": {
-    "key": "abfbbee700825d992701a17e3de61dc999c03a95",
-    "type": "COMPONENT"
-  },
+  link: { key: "25de55550a24d032b6325772b0eefcae2e4ea005", type: "COMPONENT" },
   "text-color": {
-    "key": "c987a3773aa4dfc8b4795601e123a4d080eeb712",
-    "type": "COMPONENT"
+    key: "5352877eded26c8ab798902b79b2b9bea00863f7",
+    type: "COMPONENT",
   },
-  "calendar": {
-    "key": "113d0b4fc37bcb4dcd60bf96d72acbb9110f66f1",
-    "type": "COMPONENT"
+  calendar: {
+    key: "81ee0bc94bb711a9b0e8da7743c27191c9460486",
+    type: "COMPONENT",
   },
   "account-contact": {
-    "key": "5a3bb9c2dc660ddeac64d03b844a1c77783b2c12",
-    "type": "COMPONENT"
+    key: "4993eb3dd4cce4cb3b0c84f945b66d6857029641",
+    type: "COMPONENT",
   },
   "eye-hide": {
-    "key": "a03fc3edd747064cba6e0b7b1d24f3529ad0fb87",
-    "type": "COMPONENT"
+    key: "60a80cde86e7dcd397e4dedead3204ad5fa6746a",
+    type: "COMPONENT",
   },
-  "warning": {
-    "key": "d2589e10f9b3a4775fc519935ae7e09ac3b6897c",
-    "type": "COMPONENT"
+  warning: {
+    key: "6c78146cd665a3aaec374d5fb9c1d2f34d84a766",
+    type: "COMPONENT",
   },
   "thumb-up": {
-    "key": "c349625ec5c324a8fda0f01804fb2e7af101b1f2",
-    "type": "COMPONENT"
+    key: "687d82b2c9ccdb25ca3f4e64d7b290177114ba7e",
+    type: "COMPONENT",
   },
-  "email": {
-    "key": "573e17bc5225b8c74c763a1fedc4c38ca8554d6f",
-    "type": "COMPONENT"
-  },
-  "phone": {
-    "key": "42c719cb04fae8da7dd9b79f890861eee15c704d",
-    "type": "COMPONENT"
-  },
+  email: { key: "9915f015216ff64469b01ae35289c9f4f6a04809", type: "COMPONENT" },
+  phone: { key: "2ecaf742a5055a96e8283234113c96f859127140", type: "COMPONENT" },
   "arrow-down": {
-    "key": "cabed9922ae253668cc251d469110c0820bb8892",
-    "type": "COMPONENT"
+    key: "a5586c956629863463d9aed3ed3dc15ce8382848",
+    type: "COMPONENT",
   },
-  "comment": {
-    "key": "fb5fa4ce969051c182b95bb5d2a303fa8e91ac2f",
-    "type": "COMPONENT"
+  comment: {
+    key: "3c44294be12324c7f8a4aaf93ef205f2c4a9320e",
+    type: "COMPONENT",
   },
-  "reports": {
-    "key": "7934c2399d115e4bea177a181bdf54a6b332ba9e",
-    "type": "COMPONENT"
+  reports: {
+    key: "77b136ed44dfbfa52e835acf0d8f7ea9face70b0",
+    type: "COMPONENT",
   },
-  "plus": {
-    "key": "96a0dc147c4a7a6c0a2a2a34931b45ce8f35b66d",
-    "type": "COMPONENT"
+  plus: { key: "a10fe8dd042c3caf148a2c85e8f1695b68853504", type: "COMPONENT" },
+  megaphone: {
+    key: "5b5195bac437fa9e8a7133f2952c29e14c5aaaec",
+    type: "COMPONENT",
   },
-  "megaphone": {
-    "key": "90ba4c09710d625b3c2c1566aa74cd72b1530803",
-    "type": "COMPONENT"
-  },
-  "time": {
-    "key": "78d33e4905cbd86f77eb73f16704ace7c983690c",
-    "type": "COMPONENT"
-  },
-  "globe": {
-    "key": "7ffbda723ed2aea0368f4da305079354fd13ca02",
-    "type": "COMPONENT"
-  },
-  "reload": {
-    "key": "b1eb1f9992440470a1e28d9a3ed988ba0a07b3ab",
-    "type": "COMPONENT"
+  time: { key: "6a912688bec0f272b3bf04e7bb54f6a89c24d945", type: "COMPONENT" },
+  globe: { key: "dc9985128ae1621d01752d8d2293cbae35dadce3", type: "COMPONENT" },
+  reload: {
+    key: "612ce82350934b0dc03325d8af8adcdfba63d00d",
+    type: "COMPONENT",
   },
   "star-fill": {
-    "key": "20b790631836e5f5780c667fc1c42f4f95685435",
-    "type": "COMPONENT"
+    key: "aa05e8e81dd5cffe51864eb5a329bdab16c5bc55",
+    type: "COMPONENT",
   },
-  "minus": {
-    "key": "b442df95d7fccc65dea88a6d01ed2c39fb76ad24",
-    "type": "COMPONENT"
+  minus: { key: "36460f589be663b4cd0d26dc4b3f2af3223588d2", type: "COMPONENT" },
+  home: { key: "20105da2ba1876a0b6f2aec9f1f02b0e5433888f", type: "COMPONENT" },
+  popout: {
+    key: "8a1d2be57b73c1cb564404b8939bfe4da058f910",
+    type: "COMPONENT",
   },
-  "home": {
-    "key": "610887e62d21b3fdb1cf69f94a24cc567aed0b67",
-    "type": "COMPONENT"
-  },
-  "popout": {
-    "key": "4bcdb83bbd91679962a2f6b6c2cf631df3470010",
-    "type": "COMPONENT"
-  },
-  "pin": {
-    "key": "23f982bcc52d473cbfccadcd937a8cc338d8f39b",
-    "type": "COMPONENT"
-  },
-  "unpin": {
-    "key": "d0ae807387a47e8bd0116ce08ee7e66d7a17829e",
-    "type": "COMPONENT"
-  },
+  pin: { key: "dde156307f8911bc46f7d3ed751561bbbe00aa87", type: "COMPONENT" },
+  unpin: { key: "e0f765157011f260dd7ed85334bddf5c20c621c1", type: "COMPONENT" },
   "collapse-all": {
-    "key": "3759585887558b96aa8b3dfb2d75401f395bc26c",
-    "type": "COMPONENT"
+    key: "b1e058ed4e5da562f74a96c217d15c08dd861d21",
+    type: "COMPONENT",
   },
-  "checked": {
-    "key": "9b83d851f8d2582d7cd64024b3fa0de994d16790",
-    "type": "COMPONENT"
+  checked: {
+    key: "e3bfc7919c9f8140b94986edf13e73ef4fafb2fa",
+    type: "COMPONENT",
   },
   "sort-by": {
-    "key": "5190fe396448926f53af256960a8a219b25718fb",
-    "type": "COMPONENT"
+    key: "543c65cd8954bfb1f8c49588e2f9536ad77b2016",
+    type: "COMPONENT",
   },
   "expand-all": {
-    "key": "dc59536b9a3c6b32e5c5a92ed0aac71111dd47c3",
-    "type": "COMPONENT"
+    key: "11c091d340b0c61cabbb9b10f56a840af0fa08c0",
+    type: "COMPONENT",
   },
   "account-collection": {
-    "key": "2db12a6b639fdb2ac8473b1c0d94cd9b73cd5b7e",
-    "type": "COMPONENT"
+    key: "fe831f30eca5213d9990157b293d2e66bfe32724",
+    type: "COMPONENT",
   },
   "info-collection": {
-    "key": "87f7c2d87a20efd76bb3be5044a25fd54bc247fe",
-    "type": "COMPONENT"
+    key: "c58e794e32bf9213cf0290497490c17e4967d310",
+    type: "COMPONENT",
   },
-  "delete": {
-    "key": "6c70e4d82f809c20c0e21b42ffc272b3660f79b9",
-    "type": "COMPONENT"
+  delete: {
+    key: "a7fafca8b447c552153defe4345259d884ad9667",
+    type: "COMPONENT",
   },
   "quick-action": {
-    "key": "b610f2996688af938795590d96c6b7a15da5ad6f",
-    "type": "COMPONENT"
+    key: "760d77eb08ce8fa6d80cd7e30396e2050b247acd",
+    type: "COMPONENT",
   },
   "action-list": {
-    "key": "61384ee553ee4c35c1bd2b1706050f5ae50b1908",
-    "type": "COMPONENT"
+    key: "bacd030c433b3591fbda7843f1998aec08d1caa6",
+    type: "COMPONENT",
   },
-  "attachment": {
-    "key": "121d388f1922c78c56b3f533225d683d805c3e6a",
-    "type": "COMPONENT"
+  attachment: {
+    key: "44dba53b33c76cb36a1854a1c26c242a83c8b2f6",
+    type: "COMPONENT",
   },
-  "strikethrough": {
-    "key": "b2e0c018390ba93756f3731d8fe069dcc4a88650",
-    "type": "COMPONENT"
+  strikethrough: {
+    key: "1becb3c9d3c1690c257155b09228b6638a78223f",
+    type: "COMPONENT",
   },
-  "unlink": {
-    "key": "903813bfc4022070e6f8a58585da7c706efb140f",
-    "type": "COMPONENT"
+  unlink: {
+    key: "16f7984e084dc64d6dacd0fc7b667b7c2e77142d",
+    type: "COMPONENT",
   },
-  "quote": {
-    "key": "d1a11800710dfdbf57723115f32cdc946d335f74",
-    "type": "COMPONENT"
-  },
+  quote: { key: "2f8e5c5398b6b8f69a019bc90173d9401ce4cc3b", type: "COMPONENT" },
   "view-html": {
-    "key": "3d4c7357527bb2efdaf56441d7aa5bbded2e4a7f",
-    "type": "COMPONENT"
+    key: "8cf9bcafa675474144fb845e8308088ec605625b",
+    type: "COMPONENT",
   },
   "clear-formatting": {
-    "key": "b766d1494b305f809d751b2b0895824c9971ff9d",
-    "type": "COMPONENT"
+    key: "b51943ee591f6e9abd56699ddad004c40c8457b0",
+    type: "COMPONENT",
   },
-  "undo": {
-    "key": "50d311be1554037f257c29ea9b201a54ea8a43a4",
-    "type": "COMPONENT"
-  },
-  "redo": {
-    "key": "e36ce9fe46b729d1efbd0f41a6cd3ef4acd86354",
-    "type": "COMPONENT"
-  },
+  undo: { key: "c724790319aaada56d1194e7ce2dfe149ff6682d", type: "COMPONENT" },
+  redo: { key: "28ada384bd4b6174b552b849eb05c63ce05b13cd", type: "COMPONENT" },
   "preformatted-text-box": {
-    "key": "aba35e03c45614c91de206894a723c43ab3dbf59",
-    "type": "COMPONENT"
+    key: "8596bf84b94410a66c0ea465da939f552881d8b5",
+    type: "COMPONENT",
   },
   "align-justified": {
-    "key": "1c80110b1977849b1317d54a9eb2608cde5c94d2",
-    "type": "COMPONENT"
+    key: "c06c93484d35dfc20c7ba9361fcbd1fae653644d",
+    type: "COMPONENT",
   },
   "clear-color": {
-    "key": "6281e34da8a0cb91450b5d1eac38ee30dc2e03e5",
-    "type": "COMPONENT"
+    key: "7ba0db98787e029a6505a84292ea7d8663cd68a8",
+    type: "COMPONENT",
   },
-  "image": {
-    "key": "d4e7784c5c485337cfcf9956794b83c29b1860cf",
-    "type": "COMPONENT"
-  },
-  "cart": {
-    "key": "973b35e273d50722297b4a1258485b51d658b785",
-    "type": "COMPONENT"
-  },
+  image: { key: "b79124dfe6cbd391b9a97a4ac7512350fcd6409b", type: "COMPONENT" },
+  cart: { key: "3efa565099975ceb2d2a1c31d1e2e7047c0e50a3", type: "COMPONENT" },
   "flow-card": {
-    "key": "04c3510f2e7d49058f1801728471725449b0f811",
-    "type": "COMPONENT"
+    key: "af17ed85163a61097c62b9232bf232e38a3dc4b0",
+    type: "COMPONENT",
   },
   "account-transfer": {
-    "key": "77475b4fb67690c2cb65d0c506739160f984a8da",
-    "type": "COMPONENT"
+    key: "dae004cf1c6977d0c2e74f1a22f5461b19ed3a04",
+    type: "COMPONENT",
   },
-  "gift": {
-    "key": "d7e20409a681286b2ed6078c2d91331d26dedeca",
-    "type": "COMPONENT"
-  },
+  gift: { key: "73af235382cab11811f19b687e9020aa4696e91a", type: "COMPONENT" },
   "account-remove": {
-    "key": "2e1c278c6f5e54bc390623cc19f6198eb314daa8",
-    "type": "COMPONENT"
+    key: "945b085cbee7d5aaf8ce94dea811a5fca8aaaf5c",
+    type: "COMPONENT",
   },
   "flow-test": {
-    "key": "123ad12dedaf2cafb8b262c86a91e5425e3f57e8",
-    "type": "COMPONENT"
+    key: "97a817800ea0abff3c7d054b3c6a9baf7b2b961b",
+    type: "COMPONENT",
   },
   "flow-loan": {
-    "key": "80efe8d624dccdbb8285563616734f9d9f6fe74d",
-    "type": "COMPONENT"
+    key: "4faaa2d559d5fe157e3b3fb3087db238f621e631",
+    type: "COMPONENT",
   },
   "file-clock-setting": {
-    "key": "fa25e1996488d7a6c0f35e94d2c89fb030883a54",
-    "type": "COMPONENT"
+    key: "a9700e45bed0cb7e4e58ea4808e47e3e1db421bb",
+    type: "COMPONENT",
   },
   "flow-money": {
-    "key": "ec3d5d5c282bf4da47b16e9977a06edc942f99fc",
-    "type": "COMPONENT"
+    key: "243acd2a396bdb32ffb2c6f30ac36b11df213e63",
+    type: "COMPONENT",
   },
-  "scissor": {
-    "key": "bb944636b7ca2fbff175d92396f9b56290afb690",
-    "type": "COMPONENT"
+  scissor: {
+    key: "f342a19049d72d12c2697e3f1894590472b1e24e",
+    type: "COMPONENT",
   },
   "spell-check": {
-    "key": "60eae78aa46ba19d250665c1ad5b718854983c45",
-    "type": "COMPONENT"
+    key: "90ae46d7bc32770902dcd3598c4ba10106cffd1f",
+    type: "COMPONENT",
   },
-  "highlight": {
-    "key": "c64fcc3855d5549c35f85e776068ebe84581bc84",
-    "type": "COMPONENT"
+  highlight: {
+    key: "762b7825e35b128464037763818475117c7370bf",
+    type: "COMPONENT",
   },
   "no-color": {
-    "key": "362cc97e1960b20a4f77ed7ec3847f95fb1a69c7",
-    "type": "COMPONENT"
+    key: "4d5dfb1af88df7da3e730cc5d400fc05b2d97aad",
+    type: "COMPONENT",
   },
   "run-non-monetary": {
-    "key": "70714e330f914aff5cac1881ee82d84fe147db1f",
-    "type": "COMPONENT"
+    key: "deaf7f13d2807fdb06c78256dd4441d06e49cbce",
+    type: "COMPONENT",
   },
   "auto-adjustment": {
-    "key": "d128d7a6c91c9ef1f3aea7465168bafb016a51c4",
-    "type": "COMPONENT"
+    key: "00dee005ef37e955346fa426996bbf452a0c4553",
+    type: "COMPONENT",
   },
   "arrow-navigator": {
-    "key": "7862320fd5da15e16bee4949ceca53a431fc6726",
-    "type": "COMPONENT"
+    key: "1992dc50e70322d100ba502b4e416b8985da0d95",
+    type: "COMPONENT",
   },
-  "agency": {
-    "key": "3540d388d14022f11c04b5b34d6f9d36b8d989b6",
-    "type": "COMPONENT"
+  agency: {
+    key: "025a5c0d29388c1a312514d8a84b189b5f6888a7",
+    type: "COMPONENT",
   },
   "document-create": {
-    "key": "15e2c74ef17f47a5d440168434273c51fc0a1ca5",
-    "type": "COMPONENT"
+    key: "38cfaf817714392d042c7cc301c9d895d28967d0",
+    type: "COMPONENT",
   },
   "arrow-change": {
-    "key": "7edc3758b1e656b6d9872f97e7194ff6be26ab1d",
-    "type": "COMPONENT"
+    key: "78d5214808bc0ec60af7a62025d9c516697aef57",
+    type: "COMPONENT",
   },
   "account-stop": {
-    "key": "d49d1bef537a7abf3a320efa414bbc45ef5f0d31",
-    "type": "COMPONENT"
+    key: "fc67706723fcee272b95a933aae796cfe44258b2",
+    type: "COMPONENT",
   },
   "account-setting": {
-    "key": "63b17a64750840777f2c4147e1eba5d067635658",
-    "type": "COMPONENT"
+    key: "eecab5dea40338b9e18ad1a84a777a87905d455f",
+    type: "COMPONENT",
   },
   "card-flag": {
-    "key": "aa15126a455826fe430510b5101b78ce5f3b50b2",
-    "type": "COMPONENT"
+    key: "c0ffdb8ff8f671d1eff38295db2c2a3ae951488b",
+    type: "COMPONENT",
   },
-  "fax": {
-    "key": "28c91da165b16b7db940c78ee324e76aa0131124",
-    "type": "COMPONENT"
-  },
-  "IVR": {
-    "key": "fef5aeb840f294360fbb181abf194784c06af3ee",
-    "type": "COMPONENT"
-  },
-  "mail": {
-    "key": "a18c8275e7bf139dfe5fdb258c18c27b9dd74688",
-    "type": "COMPONENT"
-  },
-  "web": {
-    "key": "300f36df4588e1b42b0338f3c80b8458facbf0c7",
-    "type": "COMPONENT"
-  },
+  fax: { key: "4c2a9549b430c02dbc1bc64f97036c659b172a69", type: "COMPONENT" },
+  IVR: { key: "8c80ee90a4644251c504a46e15b9ce6a8fb6ab43", type: "COMPONENT" },
+  mail: { key: "bd2100f537242de8dc78d844940ef23e493615a0", type: "COMPONENT" },
+  web: { key: "e5e4edd91cf2b34c6965f7124d568e9a89234ad0", type: "COMPONENT" },
   "application-options": {
-    "key": "3d11b602f8df0988360ca5865e308339ba7cde15",
-    "type": "COMPONENT"
+    key: "093f94fcdbebb4b917bc5672a7635117311a2563",
+    type: "COMPONENT",
   },
-  "design": {
-    "key": "d076f190c755a25e64fa01ccd72f0c35ae56edac",
-    "type": "COMPONENT"
+  design: {
+    key: "0b27231fdedfe98157a3d545c3616dd0a925fd87",
+    type: "COMPONENT",
   },
   "email-management": {
-    "key": "5ec3d6a2a841ef77f3b930f9dad4b752145c22a2",
-    "type": "COMPONENT"
+    key: "b2ce56e69ed00df1f70b33c14beccc8948f73153",
+    type: "COMPONENT",
   },
   "data-management": {
-    "key": "05fc0129e2941e7d37d2a632ea819571c30f1afe",
-    "type": "COMPONENT"
+    key: "f9ea5a8143fe458cf766fc970ba592743e74230d",
+    type: "COMPONENT",
   },
-  "walkin": {
-    "key": "d5cb92df8f0449014640e5ec0846e5339c0261e3",
-    "type": "COMPONENT"
+  walkin: {
+    key: "c341e3277a57511fc2da5ce11b36a4c07ef3c7b9",
+    type: "COMPONENT",
   },
-  "voice": {
-    "key": "ac93a8b01695c25352ad2e8a6484dbd143ad231a",
-    "type": "COMPONENT"
-  },
+  voice: { key: "7f4dcd6bfa21af8936f1a3c2c57525c1c922e16c", type: "COMPONENT" },
   "account-group": {
-    "key": "247faf9e824e12ce090d06a0563853e904dbacff",
-    "type": "COMPONENT"
+    key: "627837ff6d438a9577a2e0df1acdcde3b0c90741",
+    type: "COMPONENT",
   },
-  "grid": {
-    "key": "b3a2dd21f7b411341a40de21f5fccd94605f7456",
-    "type": "COMPONENT"
-  },
+  grid: { key: "d2ccbec5add8657be4f6c62c8a21335d7002f094", type: "COMPONENT" },
   "background-color": {
-    "key": "076135d5ad28aa9bda2739eacf2ce32b63341ad4",
-    "type": "COMPONENT"
+    key: "c3f574988c7c47ec741337b83e18bf10833cdf8c",
+    type: "COMPONENT",
   },
   "image-url": {
-    "key": "585be4ae4964c886d6ff199e6aa0b234dc499135",
-    "type": "COMPONENT"
+    key: "a3c42d1c4a1138c169c5b3e98a4252c562141163",
+    type: "COMPONENT",
   },
-  "unlock": {
-    "key": "c60f1d031ee03a6b11ed17b4a70734921a1753c8",
-    "type": "COMPONENT"
+  unlock: {
+    key: "f31caafaf8c92965b8e788b8dace6987dc40d180",
+    type: "COMPONENT",
   },
   "manage-ocs": {
-    "key": "3f4925159370cb65e13acf51504633406dbda91f",
-    "type": "COMPONENT"
+    key: "9516e1e6fe6076f1ef1f2cb62ff2652762d0629f",
+    type: "COMPONENT",
   },
   "manage-account-level": {
-    "key": "973d08212f756bddeef3abd791a2f346699f9e9a",
-    "type": "COMPONENT"
+    key: "97366a7dfefc80b28eba3f4e74504df30d188d2a",
+    type: "COMPONENT",
   },
   "manage-payoff": {
-    "key": "cd7db4261814a5edef460bd55827c49a447c5dd6",
-    "type": "COMPONENT"
+    key: "ca7180a4b11d0978ee28f9cea14679459b119fcc",
+    type: "COMPONENT",
   },
-  "utilities": {
-    "key": "4bebf3297e3b01db8715992cfd54b11f7ab6449d",
-    "type": "COMPONENT"
+  utilities: {
+    key: "f9ca3aee2b33584e07c81e1cd8102c9c3928245c",
+    type: "COMPONENT",
   },
-  "percent": {
-    "key": "2f9a3aeb75c17733383bbf54e58d55075b042430",
-    "type": "COMPONENT"
+  percent: {
+    key: "7a56b8c1d3e597466d96b2d17d854966da8197d4",
+    type: "COMPONENT",
   },
   "calendar-setting": {
-    "key": "d34b9c5468c1301cb36a9ebe49850f876b40f589",
-    "type": "COMPONENT"
+    key: "e98bb1b0e8a8fec6e5c11ad7b25ef8f08c7dfef3",
+    type: "COMPONENT",
   },
   "money-chart": {
-    "key": "02e98ad75ec3a693f0ff9c7bbda40cf76aa28ce4",
-    "type": "COMPONENT"
+    key: "343547379336e1e7ccd3762dcf871a0c709f2943",
+    type: "COMPONENT",
   },
   "file-money": {
-    "key": "9ac4617f3ee433ace5bd13a16671ff9106a52415",
-    "type": "COMPONENT"
+    key: "269a7d1170a810453faa2ab1cf39bcc4f389a7f6",
+    type: "COMPONENT",
   },
   "money-setting": {
-    "key": "4aea417687bc8a078bfe1bf7e7540c55b63eec98",
-    "type": "COMPONENT"
+    key: "cce2fd03ccf823ec5843eae2e87cf123451ed61a",
+    type: "COMPONENT",
   },
   "folder-file": {
-    "key": "053b79235e7e2fd11608871a69b829b6de9ca7a3",
-    "type": "COMPONENT"
+    key: "8509e7274224f6304b4db1fcafb2a69f03456781",
+    type: "COMPONENT",
   },
-  "tools": {
-    "key": "5d5c041ccdbef07792d4c0562811f15d0824b78e",
-    "type": "COMPONENT"
-  },
+  tools: { key: "4306aad53dd9d046b37c083c7728cd4589dd9e2d", type: "COMPONENT" },
   "code-web": {
-    "key": "9f6f9e73b36e3e709b65427feb30fe207e34648a",
-    "type": "COMPONENT"
+    key: "61f1d04af5d7f6908bb512a49b6e7c1f56b66cac",
+    type: "COMPONENT",
   },
   "account-search": {
-    "key": "bb39e5df297eef843054e5d6aed2471ce73cf308",
-    "type": "COMPONENT"
+    key: "83403cdb442503471fd58398436be1653f6c8602",
+    type: "COMPONENT",
   },
   "file-settings": {
-    "key": "cb0d8b031d5f9d8c5d83094681ebfb408c15b5d8",
-    "type": "COMPONENT"
+    key: "4bc687b51016068f6ae4d7a8c3d1ced77438ba20",
+    type: "COMPONENT",
   },
   "portfolio-create": {
-    "key": "79bac0910808dc276ad0e17ea9254af6b7a5d7cb",
-    "type": "COMPONENT"
+    key: "123c279a17809b18681bae069eaba9e3d251347e",
+    type: "COMPONENT",
   },
-  "gif": {
-    "key": "a4b28a2294862f171cde47142fecf9f967457a9c",
-    "type": "COMPONENT"
+  gif: { key: "e702666054bdb937f88096c0c2c0b70ae56c84b9", type: "COMPONENT" },
+  doc: { key: "921f5746ee030dbaf9c92ae563558b98694f6ab9", type: "COMPONENT" },
+  multiple: {
+    key: "f59cec84db85ca7b1b6aef23041f5c33ecfb298c",
+    type: "COMPONENT",
   },
-  "doc": {
-    "key": "d88f34ed4e724f55e694f4fbac4adb3db954e157",
-    "type": "COMPONENT"
+  txt: { key: "338c05ec03334af4720dab86e86147b7b9393ff5", type: "COMPONENT" },
+  tif: { key: "d4542d4c1563f11b71e580b729bef6e5b3f70e3b", type: "COMPONENT" },
+  xls: { key: "be66da3920e48fa4b098872ecb7b9d11bb0621f9", type: "COMPONENT" },
+  xlsx: { key: "82fb29e7d36a7a51fd780ef50716907c732cb903", type: "COMPONENT" },
+  unknown: {
+    key: "b1fb0b2581d9907639f337ef4b94a4df6aabb6e9",
+    type: "COMPONENT",
   },
-  "multiple": {
-    "key": "655bfe04cc870635e46e61136df72c3215fbf412",
-    "type": "COMPONENT"
-  },
-  "txt": {
-    "key": "8cf560b8c17e25f34d005855a815ea050825d8c8",
-    "type": "COMPONENT"
-  },
-  "tif": {
-    "key": "51541b88735ce053785b84eafa4ded41821b3ad9",
-    "type": "COMPONENT"
-  },
-  "xls": {
-    "key": "0ab45d98f3ebbebd65db587839b8a25af180ec1e",
-    "type": "COMPONENT"
-  },
-  "xlsx": {
-    "key": "f37d26435deb51879db4fb89039dfc724d1fdbfa",
-    "type": "COMPONENT"
-  },
-  "unknown": {
-    "key": "d59a5fb5d717473fc79860a6e822fd82f6b18f88",
-    "type": "COMPONENT"
-  },
-  "rtf": {
-    "key": "ccb57ce8c0af96b248a33ab7efd5755bf14cb018",
-    "type": "COMPONENT"
-  },
-  "pptx": {
-    "key": "ba6ef2a8e4ee83fcce2936d2fb5639cdee79cdb6",
-    "type": "COMPONENT"
-  },
-  "ppt": {
-    "key": "0f5acc2a2116ad2494a946ab3f15806580a04d49",
-    "type": "COMPONENT"
-  },
-  "msg": {
-    "key": "0782a6bf3b08552daf213c619ded0d52305e8f08",
-    "type": "COMPONENT"
-  },
-  "jpg": {
-    "key": "d2139d38c194e070d0e86afec1dbae298bc1acfe",
-    "type": "COMPONENT"
-  },
-  "jpeg": {
-    "key": "e46957d02c5ad3f4e2bf9aeb3d138f2cf756653b",
-    "type": "COMPONENT"
-  },
-  "png": {
-    "key": "4ad1f43c2c9195183c538684d62ee4749d6ca1e8",
-    "type": "COMPONENT"
-  },
-  "pdf": {
-    "key": "2b92b38fd503c1e8c7c539023a2730833ad8c696",
-    "type": "COMPONENT"
-  },
-  "docx": {
-    "key": "035c8c924a182df1d2d56cbd7642c0b0d7310f3a",
-    "type": "COMPONENT"
-  },
-  "csv": {
-    "key": "87f6dbca7c72c5392769984edd84287fdd18374a",
-    "type": "COMPONENT"
-  },
-  "bmp": {
-    "key": "f73b3d924bc93c4d31f08b38f4cf20259f78be87",
-    "type": "COMPONENT"
-  },
+  rtf: { key: "23a92c1845fd9378d3558175598cfc2d5dc4e270", type: "COMPONENT" },
+  pptx: { key: "64f86286324ae09d172161ef217f5de169313c2d", type: "COMPONENT" },
+  ppt: { key: "84d3d18e33b6f7ed67f93d6a1cfaef900ceee930", type: "COMPONENT" },
+  msg: { key: "8c07a1c233ca1d0bcebcb367702a0c8ecfebdf9a", type: "COMPONENT" },
+  jpg: { key: "54842e158a84fb0da67405779f631054e2e28241", type: "COMPONENT" },
+  jpeg: { key: "a3bb3b3d1f2992cad3ca8ed2c70081030f647f02", type: "COMPONENT" },
+  png: { key: "4bce277acc0f6d59fbdea0c2b416866bc007f06f", type: "COMPONENT" },
+  pdf: { key: "933663eb505c4ef4e8efd2dd9a033f29538e1dbc", type: "COMPONENT" },
+  docx: { key: "241738042395667d72c483663736bd48de6e0372", type: "COMPONENT" },
+  csv: { key: "449bd01cced2a7a7421742bb6d20fb7c527e7e9c", type: "COMPONENT" },
+  bmp: { key: "901bd8e42b088446bd8a2515cbeb40003bb58d2d", type: "COMPONENT" },
   "Action Icon": {
-    "key": "b421b4353fbc31f72821d7ec9e69b7bf7751fd00",
-    "type": "COMPONENT_SET"
+    key: "72c05d0ff700fd9e0787723b2f1fe4978e9b9c80",
+    type: "COMPONENT_SET",
   },
   "no-ch-found-1": {
-    "key": "d7a6d4efe9fde80fb2b1c308884e95411565423f",
-    "type": "COMPONENT"
+    key: "687c67921845e59d0b3e748f97dc23e69063e65a",
+    type: "COMPONENT",
   },
   "rush-card-via-mail": {
-    "key": "5b0eb6cea19fbad60c582a34b43138f6f6465b91",
-    "type": "COMPONENT"
+    key: "26e35c1de1ee9f4ac28350c4782dd41f740659df",
+    type: "COMPONENT",
   },
   "rush-pin-via-mail": {
-    "key": "f1d738eec646182a73321fcb5e289092389762d9",
-    "type": "COMPONENT"
+    key: "f02d1b319fddb94584311ec471b2732ecad6a044",
+    type: "COMPONENT",
   },
   "pin-via-mail": {
-    "key": "cf64f9c499983f372045517cf651aa80a888c5fd",
-    "type": "COMPONENT"
+    key: "b657ddc6573dacbe030ce1aafc1b6a0973beef4c",
+    type: "COMPONENT",
   },
   "24-hour-temporary-limit": {
-    "key": "cb3bbe5147060e755bc9846d5547366835216b58",
-    "type": "COMPONENT"
+    key: "245573da4238b6869cafc7bd93fdc3be5522dec8",
+    type: "COMPONENT",
   },
   "force-activate-card": {
-    "key": "91ee99774bc1424e6c200436f339e055974cfafd",
-    "type": "COMPONENT"
+    key: "b2215a742406e656f3447e4508c060a95c1311df",
+    type: "COMPONENT",
   },
   "instant-issue": {
-    "key": "6f86aa3d9e5a07b8a214d520860a345394e9191a",
-    "type": "COMPONENT"
+    key: "f321c71b4afcd304dcb3c57d64301212fc7c3106",
+    type: "COMPONENT",
   },
   "card-via-email": {
-    "key": "d152ae8bc1e65427c1c5820a349d370d291b8084",
-    "type": "COMPONENT"
+    key: "cabb3fc4b493bbbd607ec7795806979acd3aa235",
+    type: "COMPONENT",
   },
   "advise-call-back": {
-    "key": "ef387e61ca6afd7a4c8d3e7739c19b9e50241fd0",
-    "type": "COMPONENT"
+    key: "158d5af14c964047e096c85f52891df5f54fbbca",
+    type: "COMPONENT",
   },
   "no-further-actions": {
-    "key": "090f604c0ca40510592296e1afa3db9e58040fc4",
-    "type": "COMPONENT"
+    key: "8546c3c6cf5c1c34e084d3bd7528fa65cbcb4157",
+    type: "COMPONENT",
   },
   "refer-to-financial-institution": {
-    "key": "b0e4a13c389a945adacb6399311e710d41d65350",
-    "type": "COMPONENT"
+    key: "b1aadeff7e6625118d7802640ea345772aee1262",
+    type: "COMPONENT",
   },
   "financial-institution-authenticated": {
-    "key": "a8812b060dd73878044afc9d393524f81ceccb44",
-    "type": "COMPONENT"
+    key: "0c2f3054e4d5979c285c56f901b0cbd08d2066b7",
+    type: "COMPONENT",
   },
   "no-ch-found-2": {
-    "key": "c09e043c06295354d1fc906efcbadc4053260fd7",
-    "type": "COMPONENT"
+    key: "4e8659e48756b6eac6f15d009a9002ea82049aa8",
+    type: "COMPONENT",
   },
   "blank-page": {
-    "key": "0bf69991b91a7908312095b17b9a3c300ba6186a",
-    "type": "COMPONENT"
+    key: "379fde20e50f5bcfb3e08e663e641f3a8a60eafc",
+    type: "COMPONENT",
   },
   "lost-connect": {
-    "key": "0ce5884dbe5d3f9dd881890a91c501d7d57afa04",
-    "type": "COMPONENT"
+    key: "85b859899389cee5b8c69e0f4321ece256ffd329",
+    type: "COMPONENT",
   },
   "no-data-found": {
-    "key": "f399cac2cacf8ecc877d9f7b926defe9e00dfbba",
-    "type": "COMPONENT"
+    key: "d47e7336f1bf02bbc39870f4287f61141f7194ca",
+    type: "COMPONENT",
   },
   "set-up": {
-    "key": "0ffad7531eda867761bef4a4db1bf1165b5f4f49",
-    "type": "COMPONENT"
+    key: "34ca59d4336f63e0b86cf611fec4810b679824be",
+    type: "COMPONENT",
   },
   "404-error": {
-    "key": "656e5efa5ecb0a55efa45918a05a98b1258d37af",
-    "type": "COMPONENT"
+    key: "b808beefdd3b7e63721b47990fb09bcd5e77f1f0",
+    type: "COMPONENT",
   },
-  "maintainance": {
-    "key": "69705d63e4fe1b926451e4ed8acd5c346b931a6c",
-    "type": "COMPONENT"
+  maintainance: {
+    key: "2dc87ba4ad795b9d6c5ac98e6eec48abd08e0989",
+    type: "COMPONENT",
   },
   "via-fax": {
-    "key": "739d8abc7ced47c0482b18ed7c05f994dc4e7410",
-    "type": "COMPONENT"
+    key: "9758bd600315f94ae147c9280623c407a7e2996f",
+    type: "COMPONENT",
   },
   "via-mail": {
-    "key": "c6e65e4ff9ca7da664f35b4bfc8cb1426d0209a6",
-    "type": "COMPONENT"
+    key: "d7c1608b494e4bda276dd3d1e0d976a11f8df14c",
+    type: "COMPONENT",
   },
   "via-email": {
-    "key": "75deb7eaf34cd761dd46e908f45c61f9b4734781",
-    "type": "COMPONENT"
+    key: "7b81edd89f88aff8c146381ddc17b8ea318119a8",
+    type: "COMPONENT",
   },
   "Attribute Search": {
-    "key": "b23ea83cf72132c70cd98e4807082314e9fb64d7",
-    "type": "COMPONENT_SET"
+    key: "b20f37022b768581949d530ecbbfd8bf6957b01d",
+    type: "COMPONENT_SET",
   },
   "Attribute Tag": {
-    "key": "98e5e81f9e4b1160c42bdf5812f260694580102c",
-    "type": "COMPONENT_SET"
+    key: "703886bbcb31c921170445c5ad8b0e17c2e14020",
+    type: "COMPONENT_SET",
   },
   "Attribute List Item": {
-    "key": "dcfc609bfa11a9b069883663b73c06f780e57b8d",
-    "type": "COMPONENT_SET"
+    key: "04e01d61e442ff6202f15d31baf9b24c5ca4ea02",
+    type: "COMPONENT_SET",
   },
-  "_Footer": {
-    "key": "b714ba1362084d392f627edd070b988b88f37694",
-    "type": "COMPONENT"
+  _Footer: {
+    key: "a73b5ff819deb8c0249c695a86f8efe29057150c",
+    type: "COMPONENT",
   },
   "Atrribute Menu": {
-    "key": "286dc5cb91615f65d21aa28dae23a0a64e14a12b",
-    "type": "COMPONENT_SET"
+    key: "6b667775c1a2a24928c44b9d3510a45a574cf091",
+    type: "COMPONENT_SET",
   },
-  "Avatar": {
-    "key": "28377cccd289694453f292e9de5886b42fbf91e4",
-    "type": "COMPONENT_SET"
+  Avatar: {
+    key: "4e92ac71eed1dd9186fcea69f45b74c91cdd008e",
+    type: "COMPONENT_SET",
   },
   "Solid Button": {
-    "key": "c12eb6aeadfad9d2cb4142650e0cb589a5bb14e3",
-    "type": "COMPONENT_SET"
+    key: "79ed3f4264a4cf42ecdab112b55b0310d5c6dc8d",
+    type: "COMPONENT_SET",
   },
   "Dropdown - Solid": {
-    "key": "ae3e47eb423809383857ebec9f641b9f0cd0a9c5",
-    "type": "COMPONENT_SET"
+    key: "fa3c4d7754352ffa0566216011bd9d9c4b9344fe",
+    type: "COMPONENT_SET",
   },
   "Text Button": {
-    "key": "37c88f3212c19ffcffecd601613453309266a121",
-    "type": "COMPONENT_SET"
+    key: "4ec3929679bccaa8ae478d8706b37052eb7a096a",
+    type: "COMPONENT_SET",
   },
   "Dropdown - Text": {
-    "key": "0dea454996c610dc530dd5cb665a16b2fbea6172",
-    "type": "COMPONENT_SET"
+    key: "817f06e13ffc9346f8c5a34685dacb03a19ae2ec",
+    type: "COMPONENT_SET",
   },
   "Text+Icon Button": {
-    "key": "96802366148688a31e98ca5f0a5ec9d0a6e436c1",
-    "type": "COMPONENT_SET"
+    key: "443be153e25eba24272e24f5c801523d2b9cbfde",
+    type: "COMPONENT_SET",
   },
   "Icon Button": {
-    "key": "b925565491e51ace71907f2b23b25a1375fe4f7b",
-    "type": "COMPONENT_SET"
+    key: "de5f8ad29ae503fafae48e0193a0575f7828e17b",
+    type: "COMPONENT_SET",
   },
-  "Link": {
-    "key": "f34688c21994c8d932d78d8f1aab1fcc9f2ffda7",
-    "type": "COMPONENT_SET"
+  Link: {
+    key: "9d808db0f2566c6a14993daee9171a8260a7c55d",
+    type: "COMPONENT_SET",
   },
   "Group Button": {
-    "key": "5a74620d40da4c213ab1ff8e68efd05030279f2f",
-    "type": "COMPONENT_SET"
+    key: "0ef59741c46043bd0cc9208851f2394d44d3cb4a",
+    type: "COMPONENT_SET",
   },
   "Clickable Text": {
-    "key": "1711dd5604dfb27dc6fd0976feda7a22d384afc5",
-    "type": "COMPONENT_SET"
+    key: "4a936e8a53bd87c34e88eb0429407ce85967440c",
+    type: "COMPONENT_SET",
   },
-  "Badge": {
-    "key": "a559397349344edbd53b98468eb36a77057fbf10",
-    "type": "COMPONENT_SET"
+  Badge: {
+    key: "dee0264f99a02218c62589e13139029a00fb396a",
+    type: "COMPONENT_SET",
   },
   "Breadcrumbs/Item": {
-    "key": "b58e7a97b91ffe091a64dfd64e84cbd5d539aa62",
-    "type": "COMPONENT_SET"
+    key: "109c1c1017a16a4689aec8f77926de60dfebdc0b",
+    type: "COMPONENT_SET",
   },
-  "Breadcrumbs": {
-    "key": "4a2955cbd1d117ca69c671c2eeae86c60d531112",
-    "type": "COMPONENT_SET"
+  Breadcrumbs: {
+    key: "e71fa14b5eb5ad9e6d96f8cb65078ba7826fb7ed",
+    type: "COMPONENT_SET",
   },
   "Chart Tooltip": {
-    "key": "3f72388c8816d44f308fa215248fc3a3344a5643",
-    "type": "COMPONENT_SET"
+    key: "336f7a64b22f83f05db3b882e7c35c722b602ec0",
+    type: "COMPONENT_SET",
   },
   "Legend Item": {
-    "key": "ed52305d3d3520911676cfc9e0f90f92adc633c5",
-    "type": "COMPONENT_SET"
+    key: "5bf48e0f66290d7edd1786d918700c7b001af6c1",
+    type: "COMPONENT_SET",
   },
   "_Y-axis Gridline": {
-    "key": "ad43e32763fc7b5d05674938a878762419998491",
-    "type": "COMPONENT_SET"
+    key: "6ecf0b2011e7a1b16dca74772f2e2ba66f0090fc",
+    type: "COMPONENT_SET",
   },
   "_\bX-axis Gridline": {
-    "key": "81f7c17754f70508226088f72483790f817c89ce",
-    "type": "COMPONENT_SET"
+    key: "d3afcaa510f5335ab257be455fccdadcd3fecf5e",
+    type: "COMPONENT_SET",
   },
   "_Canvas / Empty": {
-    "key": "fd1882d5eddb72dac1e1efd86dfa0bc5c9c3d868",
-    "type": "COMPONENT"
+    key: "1f41f24f581ff09b860aa61cd219420b8a682f9a",
+    type: "COMPONENT",
   },
-  "Chart": {
-    "key": "8bc2c6e99218dd75bd9c3df5e8aed43e10e64452",
-    "type": "COMPONENT_SET"
+  Chart: {
+    key: "7a2443e17ff3e149a70c61f0f9b8c27e2e12c022",
+    type: "COMPONENT_SET",
   },
-  "Legend": {
-    "key": "682b554e01f607fc08fdbf9e9ea7dea56d7ce6b4",
-    "type": "COMPONENT_SET"
+  Legend: {
+    key: "991c6b4ddff6cdf7a32b9a72cdb3034d583dda7e",
+    type: "COMPONENT_SET",
   },
   "_Canvas Wrapper": {
-    "key": "ed23e5022a906e213279cc4622e2f75db5a63c22",
-    "type": "COMPONENT"
+    key: "1cd8900bf4769b3fd107f57ee361c8b0322dadef",
+    type: "COMPONENT",
   },
   "_Canvas / Chart Type": {
-    "key": "0a98b4ff25ceb403d7d9e0cc2ad588d46fbae5eb",
-    "type": "COMPONENT_SET"
+    key: "bd3a7f45650c982d144bb4a61ae1748f96507763",
+    type: "COMPONENT_SET",
   },
-  "Checkbox": {
-    "key": "bf7d07be1f950216939f34cd86fdff71ee527cb9",
-    "type": "COMPONENT_SET"
+  Checkbox: {
+    key: "0995c1cb3936f378ed28eda41c6a2c9347510ab9",
+    type: "COMPONENT_SET",
   },
   "Radio Button": {
-    "key": "f47824ac88693328140eca097ccf5b4186286662",
-    "type": "COMPONENT_SET"
+    key: "0a7c4864596eb17e154c7e5431c04fa7ebab801d",
+    type: "COMPONENT_SET",
   },
   "Selection Item": {
-    "key": "46a8f09cf9a1bd286e3850b53bebbc9ba7d979bd",
-    "type": "COMPONENT_SET"
+    key: "f726f263516ac2fbf177c21cd1027aab42f1e17f",
+    type: "COMPONENT_SET",
   },
-  "Selection": {
-    "key": "9caadb7eb0de8c6a658a4878a00083c80d9a5b47",
-    "type": "COMPONENT"
+  Selection: {
+    key: "2ac85de414e4d5b5ae1553e20c4a6e5c6b543780",
+    type: "COMPONENT",
   },
-  "Switch": {
-    "key": "02768c185775c1722e0e32e0d8c23704ffd7f2df",
-    "type": "COMPONENT_SET"
+  Switch: {
+    key: "78ab2252161e084ac15a3bb0823b40ab0ae8bcb7",
+    type: "COMPONENT_SET",
   },
   "_Color Block": {
-    "key": "e488bd377115f262dd1e2f2fa7d2c67ae116db55",
-    "type": "COMPONENT_SET"
+    key: "6d43fdc8e69a2a0ec81ad46df4134c9058394891",
+    type: "COMPONENT_SET",
   },
   "Color Picker Panel": {
-    "key": "095e02b9c035df7edf8e12113ed0dc14df0c603f",
-    "type": "COMPONENT_SET"
+    key: "5947af179d93f64d988c30dc5d14d0257c19b74e",
+    type: "COMPONENT_SET",
   },
   "Color Highlighter": {
-    "key": "f05aaec9ab7eb60106575fe3c43d0b0a74012cdc",
-    "type": "COMPONENT"
+    key: "2194d948a8925fcb873ca4956dda5ae3ca6031d2",
+    type: "COMPONENT",
   },
   "_Hex Input": {
-    "key": "6539c2d066d1ec96bf3327ba64d8308da3c7caf2",
-    "type": "COMPONENT_SET"
+    key: "a73b574c795810d05d142182528d75d3df25e607",
+    type: "COMPONENT_SET",
   },
   "_Hex Color": {
-    "key": "3a5b7ab4a10d686b7724c701378b9c6ead2856b7",
-    "type": "COMPONENT_SET"
+    key: "f06054fb8c11390edd286cc3200a63d48671843a",
+    type: "COMPONENT_SET",
   },
   "Color Input": {
-    "key": "49bdc83e440ebd5a74ae1b16fb612ee32ffd8d1f",
-    "type": "COMPONENT_SET"
+    key: "efdbe684ea44f15e0c09c281abc79d711c876505",
+    type: "COMPONENT_SET",
   },
   "No Border Dropdown List": {
-    "key": "7fe0de318ec3e2322a0894c043779bc3b49852dc",
-    "type": "COMPONENT_SET"
+    key: "6812067a88e0dac83cb37be7fc1e446d43272310",
+    type: "COMPONENT_SET",
   },
   "Multi Select - Group Style - No Border": {
-    "key": "cbdbcb158b1bd6e078a11876d2e6b70d8c9e9e4a",
-    "type": "COMPONENT_SET"
+    key: "4f9dd3fe5c8af81bfad50d8db862c7e270360fcb",
+    type: "COMPONENT_SET",
   },
   "Multi Select - Group Style": {
-    "key": "e4da34a8fc3409f500cb9b1e1bea123b1e0fa0fc",
-    "type": "COMPONENT_SET"
+    key: "369bcf8cac9dca2af5ab1e68ebb47849d0b8480c",
+    type: "COMPONENT_SET",
   },
   "Small Chip": {
-    "key": "c9cadc377103fc7c7456ebfe72fda798947f284c",
-    "type": "COMPONENT_SET"
+    key: "911731902413d6a946e1946cdac496e5df1ef3f3",
+    type: "COMPONENT_SET",
   },
   "Multi Select": {
-    "key": "b89efb1dd8575894225df85fde5eaf8ec1357b6b",
-    "type": "COMPONENT_SET"
+    key: "220ad0e3f56e5bc34861e16b59e9b9ba5687ecfc",
+    type: "COMPONENT_SET",
   },
-  "Combobox": {
-    "key": "295cd6522f9b1e2af6ba59727785751554cad4b8",
-    "type": "COMPONENT_SET"
+  Combobox: {
+    key: "f2521062232dd2de410827a13ccde8ea115cc548",
+    type: "COMPONENT_SET",
   },
   "Dropdown List": {
-    "key": "e1fa5e625ff8e5cb6c655abf6d0f4e42edf5bb05",
-    "type": "COMPONENT_SET"
+    key: "58061a43132cfccc6c7d5c36ea2e4f6195b0f151",
+    type: "COMPONENT_SET",
   },
   "Menu/Heading": {
-    "key": "ec68cf1d2f99b8dc27fbf58b476b32952580e7b7",
-    "type": "COMPONENT"
+    key: "0e225cba9ca1d1eea1bb7b1bf8dd2b7905229be4",
+    type: "COMPONENT",
   },
   "Menu/Item": {
-    "key": "65aecca4aa1b18c186b8ba6867693093ece9cfe8",
-    "type": "COMPONENT_SET"
+    key: "6733c9fa454379bebc88f67f646a0376438f6862",
+    type: "COMPONENT_SET",
   },
-  "Menu": {
-    "key": "57f2fa1bc245f5b6ca566d86715683f6cbe0cc21",
-    "type": "COMPONENT_SET"
+  Menu: {
+    key: "1f9ff01dc1e576004993ce322706d11117c75c25",
+    type: "COMPONENT_SET",
   },
   "Menu/Divider": {
-    "key": "b40c3a91ab703f47838a32f09c0c059792e24b26",
-    "type": "COMPONENT"
+    key: "da304aa5785e8f3eb0f1768b602d7973ce66e217",
+    type: "COMPONENT",
   },
   "Grid Heading": {
-    "key": "37fd9cb45f8e99a852407285306cbcf776c6d2b8",
-    "type": "COMPONENT_SET"
+    key: "02525ee85287ec56e2c29e60d383fa662ad61a55",
+    type: "COMPONENT_SET",
   },
   "Grid Cell": {
-    "key": "f5ce2b7157e9baa71b95016e3b0c0d83ebb7bf5d",
-    "type": "COMPONENT_SET"
+    key: "1276c3da2ff281caee446ab1004200e8ad981c13",
+    type: "COMPONENT_SET",
   },
   "Grid Side Heading": {
-    "key": "1c3683c53906ebbed9fac11203e6959101ee0752",
-    "type": "COMPONENT"
+    key: "294049eaad1706d1919ff81ebf50911d526733e5",
+    type: "COMPONENT",
   },
   "Grid - No Data": {
-    "key": "63913d9c6216690fca6402e28e6d9c57dda8db66",
-    "type": "COMPONENT"
+    key: "b9eb5a0a5b15c88ffa6fbd054796c9db696d1757",
+    type: "COMPONENT",
   },
   "Data Value": {
-    "key": "036ec16d0df0b6095e04dc3660937e8400973c14",
-    "type": "COMPONENT_SET"
+    key: "a06e780acbbf51c2fdf09ee1b1070bb30bd6f644",
+    type: "COMPONENT_SET",
   },
-  "Grid": {
-    "key": "234c567adcd43594440b7a88e6c437daab3e3c67",
-    "type": "COMPONENT"
-  },
-  "_Item": {
-    "key": "d784f2a833425035cf9f4808fd72e74af765dd5d",
-    "type": "COMPONENT_SET"
+  Grid: { key: "ca81dee4451209f8bb4a37c2aa53fca9d61c7e3a", type: "COMPONENT" },
+  _Item: {
+    key: "67e5eca2be4928e916087a6ce785c307eacd97fc",
+    type: "COMPONENT_SET",
   },
   "Info Bar": {
-    "key": "c8e516f5ce3a2fb30616c0f4c756758b47f481e3",
-    "type": "COMPONENT"
+    key: "ea4f1af9b22d6361068be383d1f523a62c2389b1",
+    type: "COMPONENT",
   },
   "Inline Message": {
-    "key": "4da4a6ff5f969df0cc7ca09b9ec22a4887f1b6a9",
-    "type": "COMPONENT_SET"
+    key: "c2b6438c0478d97793d0f51205ce3ca1d7a7d550",
+    type: "COMPONENT_SET",
   },
   "Toast Notification": {
-    "key": "af4841ac5c6abc37415d9960151f880ae5a8c98f",
-    "type": "COMPONENT_SET"
+    key: "357fe277f0ce3645130ff23cfde11ca6956f79e3",
+    type: "COMPONENT_SET",
   },
   "Text Area": {
-    "key": "28aff84d6048c4b93094dc2c1deaf0e95cc7c97d",
-    "type": "COMPONENT_SET"
+    key: "faccaea4a329e40263a3c786e937d57b34196374",
+    type: "COMPONENT_SET",
   },
   "Text Input": {
-    "key": "e8dcbb2a34d624faa77b1799c270875a0c1ca301",
-    "type": "COMPONENT_SET"
+    key: "36b9240d30aa9049a56820678be66c8c6b45dd09",
+    type: "COMPONENT_SET",
   },
   "Sensitive Data Input": {
-    "key": "626df4553721511734082fe3b660b288fabc2980",
-    "type": "COMPONENT_SET"
+    key: "1cfc4431308352a4e0d46fa33b13ad124e0375cb",
+    type: "COMPONENT_SET",
   },
   "Numeric Input": {
-    "key": "5177a60491ef1632354a458474ff5bbb973173f0",
-    "type": "COMPONENT_SET"
+    key: "a9ada5fd051bca2952493fa261543c593bc99efd",
+    type: "COMPONENT_SET",
   },
   "_Modal / Header": {
-    "key": "99ecfd80b3ded6507a77cec2978c40210f4ab20e",
-    "type": "COMPONENT_SET"
+    key: "e59482c2c8880ca6f2e9cc095a1ab1f5957bed53",
+    type: "COMPONENT_SET",
   },
   "_Modal / Footer": {
-    "key": "cedc316380463dad52ed7db8bfdbfda90f3a5981",
-    "type": "COMPONENT_SET"
+    key: "67713ec127b068b0564fab9b5faf5e45c58b67f6",
+    type: "COMPONENT_SET",
   },
-  "Modal": {
-    "key": "f47f71982214592cbf26b4be972534b93b0d38fc",
-    "type": "COMPONENT_SET"
+  Modal: {
+    key: "6b45bd8da9356c01413256805894a0f1f8e8859c",
+    type: "COMPONENT_SET",
   },
   "_Flyout / Header": {
-    "key": "912d4a3d63c7c1a60957745704f927b51258b138",
-    "type": "COMPONENT"
+    key: "73d9668c6e085fb85a25b919a5b0b309a8d62770",
+    type: "COMPONENT",
   },
   "_Flyout / Footer": {
-    "key": "f692cd211afc8c6602ee411b70b1daf1f470284b",
-    "type": "COMPONENT"
+    key: "c6c29c5d3a8b9c41f23c248dacfd9be2d420d8a2",
+    type: "COMPONENT",
   },
-  "Flyout": {
-    "key": "5685b3322e0f817f82760bec637d7d59600631fd",
-    "type": "COMPONENT_SET"
+  Flyout: {
+    key: "e0db3b07cf9d0f80f232e7a0854bdce908bd4c28",
+    type: "COMPONENT_SET",
   },
   "Pagination/Page Number": {
-    "key": "a98817ec4ce35561be52ec99ed7604b8818108ca",
-    "type": "COMPONENT_SET"
+    key: "5a01c267e44afb7f055b67d1cfd097f3309d546f",
+    type: "COMPONENT_SET",
   },
   "Pagination/Page Chevron": {
-    "key": "ccb59e624d0a21327fd920e16ccde26950571f8e",
-    "type": "COMPONENT_SET"
+    key: "36eab21ef9c945168bce60dfcaaec3b417a74fbb",
+    type: "COMPONENT_SET",
   },
   "Pagination/Pager": {
-    "key": "be0c708780ca0c64147a56c6ad6766822e9eb519",
-    "type": "COMPONENT_SET"
+    key: "09b29ff1ae27461cce27c6cb3b73055aaafe55a3",
+    type: "COMPONENT_SET",
   },
-  "Pagination": {
-    "key": "3b7ee898157ed2675c2c58181d50aeca48998403",
-    "type": "COMPONENT_SET"
+  Pagination: {
+    key: "fe65a7755d13000f2e5f6aba054512f0c48e48dd",
+    type: "COMPONENT_SET",
   },
-  "Popover": {
-    "key": "7be39ce068c913581414faae7195ed1007fa5312",
-    "type": "COMPONENT_SET"
+  Popover: {
+    key: "2b0bfb26b4939ece16868763b710a72d39ff74e1",
+    type: "COMPONENT_SET",
   },
   "Progress Tracker / Level 1": {
-    "key": "04c96d20ad573423ac88adadc878b5ee8cdf68d5",
-    "type": "COMPONENT_SET"
+    key: "1eb750e1b47a363eb2dca5fc0eb09ef66c8807f5",
+    type: "COMPONENT_SET",
   },
   "_Level 2 Item": {
-    "key": "56ddb06f8972d83c2ee1681fe97b0b640c4d82d5",
-    "type": "COMPONENT_SET"
+    key: "acb35916f171e00248e85cf75b592e1bf18050f3",
+    type: "COMPONENT_SET",
   },
   "Progress Tracker / Level 2": {
-    "key": "c491475ef698730b12e6f3629ba1cbff97adbe7a",
-    "type": "COMPONENT"
+    key: "fa6970e63f3b691da9acd6bcb174058d0ec7b5c1",
+    type: "COMPONENT",
   },
   "Single Search": {
-    "key": "8991d4900a4a99266830299ed82c0351f11b17f3",
-    "type": "COMPONENT_SET"
+    key: "4acfa9a80991004ed36ec6f9f5d3743c357c56a3",
+    type: "COMPONENT_SET",
   },
   "Tab Item": {
-    "key": "d01490b1ca09f98ae5c946109c6181f0d19f3637",
-    "type": "COMPONENT_SET"
+    key: "4a6c62dcafeaab680cae535628af86d6fc2117cf",
+    type: "COMPONENT_SET",
   },
   "Tab Chevron": {
-    "key": "a27e039a8b6586239e9216aa53778945baea55b3",
-    "type": "COMPONENT_SET"
+    key: "5bb95b78b5ad1eda3ff380d70a89a20a79cfea89",
+    type: "COMPONENT_SET",
   },
-  "Tab": {
-    "key": "2bdf675c49890ad920df09e18e49806fd0112d9d",
-    "type": "COMPONENT_SET"
+  Tab: {
+    key: "0f412c466d06471a41276c95a16afdce78ca2a1c",
+    type: "COMPONENT_SET",
   },
   "Top Bar": {
-    "key": "42c2ada2671ebe85d6b8393765cbb2aa3d33d1df",
-    "type": "COMPONENT_SET"
+    key: "8b6a82f2b37e190859ad6211a89c2070dea89550",
+    type: "COMPONENT_SET",
   },
   "_Top Bar Item": {
-    "key": "7f6cfea3e2c6d1df9e5abd7dae0a2c13f007c4dc",
-    "type": "COMPONENT_SET"
+    key: "530e092b305661ff2ce75978e751fed4baf8ce31",
+    type: "COMPONENT_SET",
   },
   "Tab Bar Item": {
-    "key": "afd661dfcd8e7e0f3b2f4718c4e690b58e165f64",
-    "type": "COMPONENT_SET"
+    key: "bc532f15c2a211d44d818a9f4e4a459ab66eeec2",
+    type: "COMPONENT_SET",
   },
   "Tab Bar Chevron": {
-    "key": "f56a07717daa7c358ef19bf090deab8028f7c17c",
-    "type": "COMPONENT_SET"
+    key: "ed4cc8e7e2d0c39505258103f47ac12c767c90fc",
+    type: "COMPONENT_SET",
   },
   "Tab Bar": {
-    "key": "bbb30ad1eb9e8824d6e61cc08ec07b0011b40d5c",
-    "type": "COMPONENT_SET"
+    key: "68372fae51fb406a4729e806f12ede18784b70c4",
+    type: "COMPONENT_SET",
   },
-  "Tooltip": {
-    "key": "e94a5a1d41fb05e5a19f362f6ac26f523e6bbfdf",
-    "type": "COMPONENT_SET"
+  Tooltip: {
+    key: "fd82b2b4b17b3d711993eeb546dde0375ecd7936",
+    type: "COMPONENT_SET",
   },
   "Browser Tooltip": {
-    "key": "dccb43ae97ef6953ade7480430ac438cb40658c1",
-    "type": "COMPONENT"
+    key: "749a2d80b69af839ee9a715400d0c11e5cf45e65",
+    type: "COMPONENT",
   },
   "Tree View Item": {
-    "key": "bad5b275f6b059e80d4b01dd65d78709270a5399",
-    "type": "COMPONENT_SET"
+    key: "add9fabc8b04e13f41143d7d0064281cd29191f9",
+    type: "COMPONENT_SET",
   },
   "Tree View": {
-    "key": "dd2b76a4f8b5585c290cd598c05784767fccb009",
-    "type": "COMPONENT"
+    key: "2f2acd34bb887c8c26d79cb5416de7a538d0c6d3",
+    type: "COMPONENT",
   },
-  "_Button": {
-    "key": "f2f231aa04b861749ad1bcaf26e0c487696a423b",
-    "type": "COMPONENT_SET"
+  _Button: {
+    key: "a3cbcbd8038c498573f610d98dd39daa68f9859d",
+    type: "COMPONENT_SET",
   },
   "_Month Item": {
-    "key": "b9c442f4fc502eddf1d723061e7054590db1432b",
-    "type": "COMPONENT_SET"
+    key: "4f1c8dc345fe9cbea0540ebba0374209fabfc45f",
+    type: "COMPONENT_SET",
   },
   "_Year Item": {
-    "key": "62aef6214ba5049bf7ee9d92b1fadbab3fba2842",
-    "type": "COMPONENT_SET"
+    key: "09f7ca6884ee2bd45561a1da375afcf2522d648a",
+    type: "COMPONENT_SET",
   },
   "_Date Item": {
-    "key": "d0b748538764d3c3349c07ea7f411fff8be16304",
-    "type": "COMPONENT_SET"
+    key: "1c42bcb44356c6b09a2a3ccfb5f48169f9f502a1",
+    type: "COMPONENT_SET",
   },
   "_Time Item": {
-    "key": "4d67d40456005689abadcfe25ab244cba40900d7",
-    "type": "COMPONENT_SET"
+    key: "1ba571f486ce090df36cd0125e9a3acfe440cf40",
+    type: "COMPONENT_SET",
   },
   "Date Calendar": {
-    "key": "09103ce691022f21b9cacbc94c65a76c3d047a5f",
-    "type": "COMPONENT_SET"
+    key: "6b2b187f7093118b23887bc1d201d52b828cd9df",
+    type: "COMPONENT_SET",
   },
   "Time Picker": {
-    "key": "7e6ddd2f0b1eca51296ebf6cf1071372dc43ef64",
-    "type": "COMPONENT_SET"
+    key: "9ef65ad6c3c4ad34d94f05a06bacb3cc9573f61d",
+    type: "COMPONENT_SET",
   },
   "Date Input": {
-    "key": "9a8b3ea67911cbf3ef906dc2b82057d875c96017",
-    "type": "COMPONENT_SET"
+    key: "7b9e63e1a5ddad6918f974f792be3fff89acfc5b",
+    type: "COMPONENT_SET",
   },
   "Time Input": {
-    "key": "4df40badfdd7120d326757d4e22aba457bf34e3a",
-    "type": "COMPONENT_SET"
+    key: "15615aa93ce3fa52edc3835e17f81811c616aff9",
+    type: "COMPONENT_SET",
   },
   "_Tool Item": {
-    "key": "6c4cd1d65ef19f53adb99b0c10ac13049c42a2da",
-    "type": "COMPONENT_SET"
+    key: "bed5328750ef40f35f636c462266bbee6598c4e5",
+    type: "COMPONENT_SET",
   },
   "Text Editor": {
-    "key": "ae098980033ce33083cf8c50ff569a0e1ebcc6de",
-    "type": "COMPONENT_SET"
+    key: "5087a1654694c6183f8c49abe4f77f59c93c2f9c",
+    type: "COMPONENT_SET",
   },
   "Insert Modal": {
-    "key": "387a44cde3a3a0c3b638f2155cfd1cb815cd76a4",
-    "type": "COMPONENT"
+    key: "df2071e0f3f2c93892b06fe82f378147f5c9c676",
+    type: "COMPONENT",
   },
   "_Single Upload Area": {
-    "key": "bd91e16ccaab90ba9ad7ae582dd6b558bf32b435",
-    "type": "COMPONENT_SET"
+    key: "9933df9397b61d232a2c68acffc8faad18d7605d",
+    type: "COMPONENT_SET",
   },
   "_Multiple Upload Area": {
-    "key": "9e02d17ea3894af7033e6d5983ca9db61adebd2b",
-    "type": "COMPONENT_SET"
+    key: "29e206445e76519e34bab15f79a2df80f95b5ca2",
+    type: "COMPONENT_SET",
   },
   "_Upload Item": {
-    "key": "57619cd71d4d6b30c3e717581fdf750c664777db",
-    "type": "COMPONENT_SET"
+    key: "ee4228cabfc22b36773825ec78e95c553d032398",
+    type: "COMPONENT_SET",
   },
   "Multiple Upload": {
-    "key": "1245da7b1f0a1596106a41d9d3cb046c850bca65",
-    "type": "COMPONENT_SET"
+    key: "c4a3f64b65dc8975eebd5ba07c29d34325bacd10",
+    type: "COMPONENT_SET",
   },
   "Single Upload": {
-    "key": "99f115f8af3c5333744ae348cb622c0f7a3bc2c8",
-    "type": "COMPONENT_SET"
+    key: "2171fc694b572278e6d6ce92a6434f8a9ba9cecf",
+    type: "COMPONENT_SET",
   },
   "Upload List": {
-    "key": "417d566b461a3aa48608a08363af3b1bf5892594",
-    "type": "COMPONENT_SET"
+    key: "65f9e57faf7254129d51cdae43833510b4a52343",
+    type: "COMPONENT_SET",
   },
   "_Upload Status": {
-    "key": "c9a32263bf2290b7f419b8586f7393a7a83de825",
-    "type": "COMPONENT_SET"
-  }
-}
+    key: "5b5c9e976449acfe4eaf4789deabab0ae09f1d37",
+    type: "COMPONENT_SET",
+  },
+};
 
 export default components;
